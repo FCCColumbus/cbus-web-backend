@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django_extensions', #Great packaged to access abstract models
     'django_filters', #Used with DRF
     'rest_framework', #DRF package
-    'fccc_meetup2discord_api', # New app
+    'core', # New app
 ]
 
 MIDDLEWARE = [
