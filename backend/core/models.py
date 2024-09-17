@@ -20,4 +20,4 @@ class Contact(
 
 	def __str__(self):
 		return f'{self.title}'
-# Create your models here.
+
