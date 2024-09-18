@@ -6,7 +6,7 @@ services:
       context: ./backend
       dockerfile: docker/docker_files/Dockerfile
     restart: unless-stopped
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ./backend:/code
     ports:
