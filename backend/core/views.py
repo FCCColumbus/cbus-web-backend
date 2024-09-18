@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 from json import JSONDecodeError
 from django.http import JsonResponse
 from .serializers import ContactSerializer

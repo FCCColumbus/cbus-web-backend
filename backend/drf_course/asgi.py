@@ -1,5 +1,5 @@
 """
-ASGI config for FCCC_Meetup2Discord_API project.
+ASGI config for drf_course project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'FCCC_Meetup2Discord_API.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'drf_course.settings')
 
 application = get_asgi_application()
