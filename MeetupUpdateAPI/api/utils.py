@@ -1,7 +1,7 @@
 from datetime import datetime
 import pytz
 from icalendar import Calendar, Event
-from models import MeetupIcalModel
+from .models import MeetupIcalModel
 
 
 
