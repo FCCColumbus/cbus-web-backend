@@ -3,3 +3,5 @@ djangorestframework
 python-dotenv
 environs
 django_geopostcodes 
+icalendar
+pytz

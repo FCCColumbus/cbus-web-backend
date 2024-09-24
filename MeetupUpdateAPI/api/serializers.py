@@ -9,5 +9,5 @@ class MeetupIcalKeysSerializer(serializers.ModelSerializer):
     fields = ['id', 'created_at', 'updated_at', 
           'start_time', 'end_time', 'status', 
           'summary', 'description', 'event_class', 
-          'author_id', 'geo', 'location', 
+          'author_id', 'location', 
           'url', 'uuid']

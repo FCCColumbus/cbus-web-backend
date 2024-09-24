@@ -1,5 +1,4 @@
 from django.db import models
-from django_geopostcodes import GeoPostcodeField
 
 
 class MeetupIcalModel(models.Model):
@@ -10,9 +9,8 @@ class MeetupIcalModel(models.Model):
     status = models.CharField(max_length=100)
     summary = models.TextField()
     description = models.TextField()
-    event_class = models.CharField()
+    event_class = models.CharField(max_length=100)
     author = models.CharField(max_length=100) 
-    geo = GeoPostcodeField(null=True, blank=True)
     location = models.CharField(max_length=255, blank=True)
     url = models.URLField()
     uuid = models.UUIDField()

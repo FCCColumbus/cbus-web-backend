@@ -1,7 +1,7 @@
 from datetime import datetime
 import pytz
 from icalendar import Calendar, Event
-from .models import MeetupIcalModel
+from models import MeetupIcalModel
 
 
 
@@ -30,7 +30,6 @@ def parse_ical_file(file_path):
                 'description': event.get('description', ''),
                 'event_class': event.get('class', ''),
                 'author': 'Meetup',
-                'geo': event.get('geo', None),
                 'location': event.get('location', ''),
                 'url': event.get('url', ''),
             }
