@@ -1,0 +1,1222 @@
+﻿BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Meetup//RemoteApi//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-ORIGINAL-URL:https://www.meetup.com/techlifecolumbus/events/ical/
+X-WR-CALNAME:Events - TechLife Columbus
+BEGIN:VTIMEZONE
+TZID:America/New_York
+TZURL:http://tzurl.org/zoneinfo-outlook/America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230914T183000
+DTEND;TZID=America/New_York:20230914T210000
+STATUS:CONFIRMED
+SUMMARY:Code Jam Columbus
+DESCRIPTION:TechLife Columbus\nThursday\, September 14 at 6:30 PM\n\nAn E
+ vening of Kibitzing and Coding. Columbus Code Jam is a casual meetup to 
+ pair on cool projects\, to get one-on-one guidance from experienced deve
+ lop...\n\nhttps://www.meetup.com/techlifecolumbus/events/295687920/
+CLASS:PUBLIC
+CREATED:20230309T172041Z
+GEO:39.99;-83.04
+LOCATION:Online event
+URL:https://www.meetup.com/techlifecolumbus/events/295687920/
+LAST-MODIFIED:20230309T172041Z
+UID:event_vzhrctyfcmbsb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230918T180000
+DTEND;TZID=America/New_York:20230918T210000
+STATUS:CONFIRMED
+SUMMARY:Columbus Ruby Brigade Monthly Meeting
+DESCRIPTION:TechLife Columbus\nMonday\, September 18 at 6:00 PM\n\nplease
+  rsvp here - https://www.meetup.com/columbusrb/events/mhlkdtyfchbtb/ AGE
+ NDA: * From 6pm - 6:30pm we'll meet at The Grizzly (from the entrance\, 
+ s...\n\nhttps://www.meetup.com/techlifecolumbus/events/295765434/
+CLASS:PUBLIC
+CREATED:20230509T011237Z
+GEO:39.99;-83.04
+LOCATION:5200 Rings Rd (5200 Rings Rd\, Dublin\, OH 43017)
+URL:https://www.meetup.com/techlifecolumbus/events/295765434/
+LAST-MODIFIED:20230509T011237Z
+UID:event_gsgtdtyfcmbxb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230918T183000
+DTEND;TZID=America/New_York:20230918T203000
+STATUS:CONFIRMED
+SUMMARY:COJUG Special Event - Wargames & From Spring Boot 2 To Spring Boo
+ t 3
+DESCRIPTION:TechLife Columbus\nMonday\, September 18 at 6:30 PM\n\n**Warg
+ ames - Java vulnerabilities and why you should care** Java is great and 
+ we all spend time on making it more performant\, more scalable and maint
+ a...\n\nhttps://www.meetup.com/techlifecolumbus/events/295807853/
+CLASS:PUBLIC
+CREATED:20230831T191001Z
+GEO:39.99;-83.04
+LOCATION:Manifest Solutions Corporation (2035 Riverside Dr\, Columbus\, O
+ H 43221)
+URL:https://www.meetup.com/techlifecolumbus/events/295807853/
+LAST-MODIFIED:20230831T191001Z
+UID:event_295807853@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230919T180000
+DTEND;TZID=America/New_York:20230919T200000
+STATUS:CONFIRMED
+SUMMARY:Building Resilient Applications with AWS Resilience Hub - AWS Col
+ umbus Meetup
+DESCRIPTION:TechLife Columbus\nTuesday\, September 19 at 6:00 PM\n\nIn th
+ is session\, Joe Morotti\, Sr. Solutions Architect with AWS\, will provi
+ de an overview of AWS Resilience Hub\, a service that provides you a sin
+ gle p...\n\nhttps://www.meetup.com/techlifecolumbus/events/294518719/
+CLASS:PUBLIC
+CREATED:20230630T131226Z
+GEO:39.99;-83.04
+LOCATION:Presidio (5025 Bradenton Ave # E\, Dublin\, OH 43017)
+URL:https://www.meetup.com/techlifecolumbus/events/294518719/
+LAST-MODIFIED:20230905T224852Z
+UID:event_294518719@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230920T180000
+DTEND;TZID=America/New_York:20230920T210000
+STATUS:CONFIRMED
+SUMMARY:Free Code Camp Columbus & GiveBackHack - Outsmarting Applicant Tr
+ acking Systems
+DESCRIPTION:TechLife Columbus\nWednesday\, September 20 at 6:00 PM\n\n**U
+ PDATE**: Adam Morris from (https://givebackhack.com/columbus/) will be j
+ oining us and sharing details on the (https://givebackhack.com/columbus/
+ eve...\n\nhttps://www.meetup.com/techlifecolumbus/events/295393260/
+CLASS:PUBLIC
+CREATED:20230811T222854Z
+GEO:39.99;-83.04
+LOCATION:COhatch Upper Arlington (1733 W Lane Ave\, Columbus\, OH 43221)
+URL:https://www.meetup.com/techlifecolumbus/events/295393260/
+LAST-MODIFIED:20230911T151959Z
+UID:event_295393260@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230921T093000
+DTEND;TZID=America/New_York:20230921T103000
+STATUS:CONFIRMED
+SUMMARY:NFT AI ART Columbus 
+DESCRIPTION:TechLife Columbus\nThursday\, September 21 at 9:30 AM\n\nNFT'
+ s are here to stay folks! This is a group for like minded people interes
+ ted in understanding\, leveraging\, using\, creating for\, profiting fro
+ m\, tra...\n\nhttps://www.meetup.com/techlifecolumbus/events/295824989/
+CLASS:PUBLIC
+CREATED:20220426T204712Z
+GEO:39.99;-83.04
+LOCATION:The Point at Otterbein (60 Collegeview Rd\, Westerville\, OH 430
+ 81)
+URL:https://www.meetup.com/techlifecolumbus/events/295824989/
+LAST-MODIFIED:20220426T204713Z
+UID:event_mmzstsyfcmbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230921T173000
+DTEND;TZID=America/New_York:20230921T203000
+STATUS:CONFIRMED
+SUMMARY:Buckeye SharePoint User Group
+DESCRIPTION:TechLife Columbus\nThursday\, September 21 at 5:30 PM\n\nWe a
+ re a group of local professionals with a passion for SharePoint. The gro
+ up is open to anyone with an interest in working with the SharePoint tec
+ hn...\n\nhttps://www.meetup.com/techlifecolumbus/events/293025447/
+CLASS:PUBLIC
+CREATED:20120122T203826Z
+GEO:39.99;-83.04
+LOCATION:Microsoft Offices (8800 Lyra Dr.\, Suite 400\, Columbus\, OH 432
+ 40)
+URL:https://www.meetup.com/techlifecolumbus/events/293025447/
+LAST-MODIFIED:20120122T203826Z
+UID:event_dpkdmcyfcmbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230922T073000
+DTEND;TZID=America/New_York:20230922T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, September 22 at 7:30 AM\n\nJoin o
+ ther experienced and aspiring agile coaches and professionals to: * deve
+ lop and practice your coaching skills in a peer-to-peer environment * sh
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/295907302/
+CLASS:PUBLIC
+CREATED:20230905T164815Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907302/
+LAST-MODIFIED:20230905T164815Z
+UID:event_295907302@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230928T173000
+DTEND;TZID=America/New_York:20230928T193000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio .NET Developers  Group
+DESCRIPTION:TechLife Columbus\nThursday\, September 28 at 5:30 PM\n\n* Wh
+ o Can Attend * The Central Ohio .Net Developers Group meetings are free 
+ and open to the public! All developers\; professional\, student\, and ho
+ bbies...\n\nhttps://www.meetup.com/techlifecolumbus/events/295985879/
+CLASS:PUBLIC
+CREATED:20220224T164608Z
+GEO:39.99;-83.04
+LOCATION:Improving (One Easton Oval Suite. 175\, Columbus\, OH 43219)
+URL:https://www.meetup.com/techlifecolumbus/events/295985879/
+LAST-MODIFIED:20220224T164608Z
+UID:event_nglqssyfcmblc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230929T090000
+DTEND;TZID=America/New_York:20230929T200000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Software Symposium
+DESCRIPTION:TechLife Columbus\nFriday\, September 29 at 9:00 AM\n\nExciti
+ ng news for software developers\, architects\, and tech leaders! The hig
+ hly acclaimed No Fluff Just Stuff Java Symposium Tour Series is back in 
+ Co...\n\nhttps://www.meetup.com/techlifecolumbus/events/294740787/
+CLASS:PUBLIC
+CREATED:20230711T133608Z
+GEO:39.99;-83.04
+LOCATION:Embassy Suites by Hilton Columbus Airport (2886 Airport Dr\, Col
+ umbus\, OH 43219)
+URL:https://www.meetup.com/techlifecolumbus/events/294740787/
+LAST-MODIFIED:20230711T133608Z
+UID:event_294740787@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230929T090000
+DTEND;TZID=America/New_York:20230929T120000
+STATUS:CONFIRMED
+SUMMARY:Developer Productivity Engineering – The Next Big Thing in Softwa
+ re Development
+DESCRIPTION:TechLife Columbus\nFriday\, September 29 at 9:00 AM\n\nJoin u
+ s for this complimentary DPE workshop prior to the start of the 2023 Cen
+ tral Ohio Software Symposium.  \\- Workshop will be held Friday\\\, Sept
+ emb...\n\nhttps://www.meetup.com/techlifecolumbus/events/295781423/
+CLASS:PUBLIC
+CREATED:20230830T171944Z
+GEO:39.99;-83.04
+LOCATION:Embassy Suites by Hilton Columbus Airport (2886 Airport Dr\, Col
+ umbus\, OH 43219)
+URL:https://www.meetup.com/techlifecolumbus/events/295781423/
+LAST-MODIFIED:20230830T171944Z
+UID:event_295781423@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20230930T090000
+DTEND;TZID=America/New_York:20230930T180000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Software Symposium
+DESCRIPTION:TechLife Columbus\nSaturday\, September 30 at 9:00 AM\n\nExci
+ ting news for software developers\, architects\, and tech leaders! The h
+ ighly acclaimed No Fluff Just Stuff Java Symposium Tour Series is back i
+ n Co...\n\nhttps://www.meetup.com/techlifecolumbus/events/294740840/
+CLASS:PUBLIC
+CREATED:20230711T133658Z
+GEO:39.99;-83.04
+LOCATION:Embassy Suites by Hilton Columbus Airport (2886 Airport Dr\, Col
+ umbus\, OH 43219)
+URL:https://www.meetup.com/techlifecolumbus/events/294740840/
+LAST-MODIFIED:20230711T133658Z
+UID:event_294740840@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231001T090000
+DTEND;TZID=America/New_York:20231001T180000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Software Symposium
+DESCRIPTION:TechLife Columbus\nSunday\, October 1 at 9:00 AM\n\nExciting 
+ news for software developers\, architects\, and tech leaders! The highly
+  acclaimed No Fluff Just Stuff Java Symposium Tour Series is back in Co.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/294740873/
+CLASS:PUBLIC
+CREATED:20230711T133730Z
+GEO:39.99;-83.04
+LOCATION:Embassy Suites by Hilton Columbus Airport (2886 Airport Dr\, Col
+ umbus\, OH 43219)
+URL:https://www.meetup.com/techlifecolumbus/events/294740873/
+LAST-MODIFIED:20230711T133730Z
+UID:event_294740873@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231003T180000
+DTEND;TZID=America/New_York:20231003T200000
+STATUS:CONFIRMED
+SUMMARY:Technical Debt – The <invisible> Elephant in the Room - AWS Colum
+ bus Meetup
+DESCRIPTION:TechLife Columbus\nTuesday\, October 3 at 6:00 PM\n\nWe’ll ex
+ plore what it is\, how it happens\, when to take action\, how to reverse
+  it\, and why it is sometimes acceptable to keep accumulating it. Bio: M
+ at...\n\nhttps://www.meetup.com/techlifecolumbus/events/295614614/
+CLASS:PUBLIC
+CREATED:20230822T183334Z
+GEO:39.99;-83.04
+LOCATION:Branch Insurance (20 E Broad St Ste. 1200\, Columbus\, OH 43215)
+ 
+URL:https://www.meetup.com/techlifecolumbus/events/295614614/
+LAST-MODIFIED:20230822T183539Z
+UID:event_295614614@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231006T073000
+DTEND;TZID=America/New_York:20231006T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, October 6 at 7:30 AM\n\nJoin othe
+ r experienced and aspiring agile coaches and professionals to: * develop
+  and practice your coaching skills in a peer-to-peer environment * sh...
+ \n\nhttps://www.meetup.com/techlifecolumbus/events/295907314/
+CLASS:PUBLIC
+CREATED:20230905T164855Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907314/
+LAST-MODIFIED:20230905T164855Z
+UID:event_295907314@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231012T183000
+DTEND;TZID=America/New_York:20231012T210000
+STATUS:CONFIRMED
+SUMMARY:Code Jam Columbus
+DESCRIPTION:TechLife Columbus\nThursday\, October 12 at 6:30 PM\n\nAn Eve
+ ning of Kibitzing and Coding. Columbus Code Jam is a casual meetup to pa
+ ir on cool projects\, to get one-on-one guidance from experienced develo
+ p...\n\nhttps://www.meetup.com/techlifecolumbus/events/vzhrctyfcnbqb/
+CLASS:PUBLIC
+CREATED:20230309T172041Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vzhrctyfcnbqb/
+LAST-MODIFIED:20230309T172041Z
+UID:event_vzhrctyfcnbqb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231014T110000
+DTEND;TZID=America/New_York:20231014T140000
+STATUS:CONFIRMED
+SUMMARY:Pair Programming & Mentoring
+DESCRIPTION:TechLife Columbus\nSaturday\, October 14 at 11:00 AM\n\nTo av
+ oid the spread of COVID-19\, we will not be offering face-to-face meetup
+ s until the pandemic resolves. Our code challenges\, curriculum and remo
+ te ...\n\nhttps://www.meetup.com/techlifecolumbus/events/sfndssyfcnbsb/
+CLASS:PUBLIC
+CREATED:20220130T192723Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sfndssyfcnbsb/
+LAST-MODIFIED:20220130T192724Z
+UID:event_sfndssyfcnbsb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231016T180000
+DTEND;TZID=America/New_York:20231016T210000
+STATUS:CONFIRMED
+SUMMARY:Columbus Ruby Brigade Monthly Meeting
+DESCRIPTION:TechLife Columbus\nMonday\, October 16 at 6:00 PM\n\nplease r
+ svp here - https://www.meetup.com/columbusrb/events/mhlkdtyfchbtb/ AGEND
+ A: * From 6pm - 6:30pm we'll meet at The Grizzly (from the entrance\, s.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/gsgtdtyfcnbvb/
+CLASS:PUBLIC
+CREATED:20230509T011237Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/gsgtdtyfcnbvb/
+LAST-MODIFIED:20230509T011237Z
+UID:event_gsgtdtyfcnbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231017T180000
+DTEND;TZID=America/New_York:20231017T200000
+STATUS:CONFIRMED
+SUMMARY:Data Protection on AWS: A Guide for Backup\, DR and Security -AWS
+  Columbus Meetup
+DESCRIPTION:TechLife Columbus\nTuesday\, October 17 at 6:00 PM\n\nHaving 
+ a strong\, secure data protection strategy is essential for every busine
+ ss. Businesses today need to be following the 3-2-1 best practice guidel
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/294518820/
+CLASS:PUBLIC
+CREATED:20230630T132253Z
+GEO:39.99;-83.04
+LOCATION:Veeam Software (8800 Lyra Dr #450\, Columbus\, OH 43240)
+URL:https://www.meetup.com/techlifecolumbus/events/294518820/
+LAST-MODIFIED:20230808T204255Z
+UID:event_294518820@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231017T180000
+DTEND;TZID=America/New_York:20231017T200000
+STATUS:CONFIRMED
+SUMMARY:Cap City Biohackers Monthly Meetup: DIY Lab Equipment Hack
+DESCRIPTION:TechLife Columbus\nTuesday\, October 17 at 6:00 PM\n\nJoin us
+  every third Wednesday of each month for the Cap City Biohackers Monthly
+  Meetup. This is a  working group dedicated to finding creative DIY sol.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/vjqmqryfcnbwb/
+CLASS:PUBLIC
+CREATED:20200309T225919Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vjqmqryfcnbwb/
+LAST-MODIFIED:20200309T225919Z
+UID:event_vjqmqryfcnbwb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231019T093000
+DTEND;TZID=America/New_York:20231019T103000
+STATUS:CONFIRMED
+SUMMARY:NFT AI ART Columbus 
+DESCRIPTION:TechLife Columbus\nThursday\, October 19 at 9:30 AM\n\nNFT's 
+ are here to stay folks! This is a group for like minded people intereste
+ d in understanding\, leveraging\, using\, creating for\, profiting from\
+ , tra...\n\nhttps://www.meetup.com/techlifecolumbus/events/mmzstsyfcnbzb
+ /
+CLASS:PUBLIC
+CREATED:20220426T204712Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/mmzstsyfcnbzb/
+LAST-MODIFIED:20220426T204713Z
+UID:event_mmzstsyfcnbzb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231019T173000
+DTEND;TZID=America/New_York:20231019T203000
+STATUS:CONFIRMED
+SUMMARY:Buckeye SharePoint User Group
+DESCRIPTION:TechLife Columbus\nThursday\, October 19 at 5:30 PM\n\nWe are
+  a group of local professionals with a passion for SharePoint. The group
+  is open to anyone with an interest in working with the SharePoint techn
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/dpkdmcyfcnbzb/
+CLASS:PUBLIC
+CREATED:20120122T203826Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/dpkdmcyfcnbzb/
+LAST-MODIFIED:20120122T203826Z
+UID:event_dpkdmcyfcnbzb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231020T073000
+DTEND;TZID=America/New_York:20231020T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, October 20 at 7:30 AM\n\nJoin oth
+ er experienced and aspiring agile coaches and professionals to: * develo
+ p and practice your coaching skills in a peer-to-peer environment * sh..
+ .\n\nhttps://www.meetup.com/techlifecolumbus/events/295907327/
+CLASS:PUBLIC
+CREATED:20230905T164921Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907327/
+LAST-MODIFIED:20230905T164921Z
+UID:event_295907327@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231026T173000
+DTEND;TZID=America/New_York:20231026T193000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio .NET Developers  Group
+DESCRIPTION:TechLife Columbus\nThursday\, October 26 at 5:30 PM\n\n* Who 
+ Can Attend * The Central Ohio .Net Developers Group meetings are free an
+ d open to the public! All developers\; professional\, student\, and hobb
+ ies...\n\nhttps://www.meetup.com/techlifecolumbus/events/nglqssyfcnbjc/
+CLASS:PUBLIC
+CREATED:20220224T164608Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/nglqssyfcnbjc/
+LAST-MODIFIED:20220224T164608Z
+UID:event_nglqssyfcnbjc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231103T073000
+DTEND;TZID=America/New_York:20231103T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, November 3 at 7:30 AM\n\nJoin oth
+ er experienced and aspiring agile coaches and professionals to: * develo
+ p and practice your coaching skills in a peer-to-peer environment * sh..
+ .\n\nhttps://www.meetup.com/techlifecolumbus/events/295907339/
+CLASS:PUBLIC
+CREATED:20230905T164951Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907339/
+LAST-MODIFIED:20230905T164951Z
+UID:event_295907339@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231108T180000
+DTEND;TZID=America/New_York:20231108T200000
+STATUS:CONFIRMED
+SUMMARY:DevSecOps - Integrating security into your pipeline - AWS Columbu
+ s Meetup
+DESCRIPTION:TechLife Columbus\nWednesday\, November 8 at 6:00 PM\n\nWant 
+ to know how to be secure and still deliver quickly?  In this session\, w
+ e will talk about DevOps to DevSecOps cultural shift and how you can del
+ iv...\n\nhttps://www.meetup.com/techlifecolumbus/events/294518725/
+CLASS:PUBLIC
+CREATED:20230630T131256Z
+GEO:39.99;-83.04
+LOCATION:Presidio (5025 Bradenton Ave # E\, Dublin\, OH 43017)
+URL:https://www.meetup.com/techlifecolumbus/events/294518725/
+LAST-MODIFIED:20230808T204048Z
+UID:event_294518725@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231109T183000
+DTEND;TZID=America/New_York:20231109T210000
+STATUS:CONFIRMED
+SUMMARY:Code Jam Columbus
+DESCRIPTION:TechLife Columbus\nThursday\, November 9 at 6:30 PM\n\nAn Eve
+ ning of Kibitzing and Coding. Columbus Code Jam is a casual meetup to pa
+ ir on cool projects\, to get one-on-one guidance from experienced develo
+ p...\n\nhttps://www.meetup.com/techlifecolumbus/events/vzhrctyfcpbmb/
+CLASS:PUBLIC
+CREATED:20230309T172041Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vzhrctyfcpbmb/
+LAST-MODIFIED:20230309T172041Z
+UID:event_vzhrctyfcpbmb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231110T070000
+DTEND;TZID=America/New_York:20231110T163000
+STATUS:CONFIRMED
+SUMMARY:PMI Central Ohio - Professional Development Day 2023
+DESCRIPTION:TechLife Columbus\nFriday\, November 10 at 7:00 AM\n\nRegistr
+ ation is Open!Register Here: (https://www.pmicoc.org/copy-of-pdd-2023-1"
+  class="linkified">https://www.pmicoc.org/copy-of-pdd-2023-1](https://w.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/290878144/
+CLASS:PUBLIC
+CREATED:20230111T203832Z
+GEO:39.99;-83.04
+LOCATION:Greater Columbus Convention Center (400 N High St\, Columbus\, O
+ H 43215)
+URL:https://www.meetup.com/techlifecolumbus/events/290878144/
+LAST-MODIFIED:20230808T140547Z
+UID:event_290878144@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231111T110000
+DTEND;TZID=America/New_York:20231111T140000
+STATUS:CONFIRMED
+SUMMARY:Pair Programming & Mentoring
+DESCRIPTION:TechLife Columbus\nSaturday\, November 11 at 11:00 AM\n\nTo a
+ void the spread of COVID-19\, we will not be offering face-to-face meetu
+ ps until the pandemic resolves. Our code challenges\, curriculum and rem
+ ote ...\n\nhttps://www.meetup.com/techlifecolumbus/events/sfndssyfcpbpb/
+ 
+CLASS:PUBLIC
+CREATED:20220130T192723Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sfndssyfcpbpb/
+LAST-MODIFIED:20220130T192724Z
+UID:event_sfndssyfcpbpb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231113T180000
+DTEND;TZID=America/New_York:20231113T200000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Azure
+DESCRIPTION:TechLife Columbus\nMonday\, November 13 at 6:00 PM\n\nDetails
+  coming soon!\n\nhttps://www.meetup.com/techlifecolumbus/events/sbnzlryf
+ cpbrb/
+CLASS:PUBLIC
+CREATED:20191213T130229Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sbnzlryfcpbrb/
+LAST-MODIFIED:20191213T130229Z
+UID:event_sbnzlryfcpbrb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231115T180000
+DTEND;TZID=America/New_York:20231115T210000
+STATUS:CONFIRMED
+SUMMARY:Free Code Camp Columbus - Crafting Your Resume for Success
+DESCRIPTION:TechLife Columbus\nWednesday\, November 15 at 6:00 PM\n\n🌟 A
+ re you passionate about learning to code for free through Free Code Camp
+  but unsure about which skills to showcase on your resume? Join us for a
+ n i...\n\nhttps://www.meetup.com/techlifecolumbus/events/295393990/
+CLASS:PUBLIC
+CREATED:20230811T225139Z
+GEO:39.99;-83.04
+LOCATION:COhatch Upper Arlington (1733 W Lane Ave\, Columbus\, OH 43221)
+URL:https://www.meetup.com/techlifecolumbus/events/295393990/
+LAST-MODIFIED:20230811T225807Z
+UID:event_295393990@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231116T093000
+DTEND;TZID=America/New_York:20231116T103000
+STATUS:CONFIRMED
+SUMMARY:NFT AI ART Columbus 
+DESCRIPTION:TechLife Columbus\nThursday\, November 16 at 9:30 AM\n\nNFT's
+  are here to stay folks! This is a group for like minded people interest
+ ed in understanding\, leveraging\, using\, creating for\, profiting from
+ \, tra...\n\nhttps://www.meetup.com/techlifecolumbus/events/mmzstsyfcpbv
+ b/
+CLASS:PUBLIC
+CREATED:20220426T204712Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/mmzstsyfcpbvb/
+LAST-MODIFIED:20220426T204713Z
+UID:event_mmzstsyfcpbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231116T173000
+DTEND;TZID=America/New_York:20231116T203000
+STATUS:CONFIRMED
+SUMMARY:Buckeye SharePoint User Group
+DESCRIPTION:TechLife Columbus\nThursday\, November 16 at 5:30 PM\n\nWe ar
+ e a group of local professionals with a passion for SharePoint. The grou
+ p is open to anyone with an interest in working with the SharePoint tech
+ n...\n\nhttps://www.meetup.com/techlifecolumbus/events/dpkdmcyfcpbvb/
+CLASS:PUBLIC
+CREATED:20120122T203826Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/dpkdmcyfcpbvb/
+LAST-MODIFIED:20120122T203826Z
+UID:event_dpkdmcyfcpbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231117T073000
+DTEND;TZID=America/New_York:20231117T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, November 17 at 7:30 AM\n\nJoin ot
+ her experienced and aspiring agile coaches and professionals to: * devel
+ op and practice your coaching skills in a peer-to-peer environment * sh.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/295907341/
+CLASS:PUBLIC
+CREATED:20230905T165018Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907341/
+LAST-MODIFIED:20230905T165018Z
+UID:event_295907341@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231120T180000
+DTEND;TZID=America/New_York:20231120T210000
+STATUS:CONFIRMED
+SUMMARY:Columbus Ruby Brigade Monthly Meeting
+DESCRIPTION:TechLife Columbus\nMonday\, November 20 at 6:00 PM\n\nplease 
+ rsvp here - https://www.meetup.com/columbusrb/events/mhlkdtyfchbtb/ AGEN
+ DA: * From 6pm - 6:30pm we'll meet at The Grizzly (from the entrance\, s
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/gsgtdtyfcpbbc/
+CLASS:PUBLIC
+CREATED:20230509T011237Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/gsgtdtyfcpbbc/
+LAST-MODIFIED:20230509T011237Z
+UID:event_gsgtdtyfcpbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231121T180000
+DTEND;TZID=America/New_York:20231121T200000
+STATUS:CONFIRMED
+SUMMARY:Cap City Biohackers Monthly Meetup: DIY Lab Equipment Hack
+DESCRIPTION:TechLife Columbus\nTuesday\, November 21 at 6:00 PM\n\nJoin u
+ s every third Wednesday of each month for the Cap City Biohackers Monthl
+ y Meetup. This is a  working group dedicated to finding creative DIY sol
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/vjqmqryfcpbcc/
+CLASS:PUBLIC
+CREATED:20200309T225919Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vjqmqryfcpbcc/
+LAST-MODIFIED:20200309T225919Z
+UID:event_vjqmqryfcpbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231123T173000
+DTEND;TZID=America/New_York:20231123T193000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio .NET Developers  Group
+DESCRIPTION:TechLife Columbus\nThursday\, November 23 at 5:30 PM\n\n* Who
+  Can Attend * The Central Ohio .Net Developers Group meetings are free a
+ nd open to the public! All developers\; professional\, student\, and hob
+ bies...\n\nhttps://www.meetup.com/techlifecolumbus/events/nglqssyfcpbfc/
+ 
+CLASS:PUBLIC
+CREATED:20220224T164608Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/nglqssyfcpbfc/
+LAST-MODIFIED:20220224T164608Z
+UID:event_nglqssyfcpbfc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231201T073000
+DTEND;TZID=America/New_York:20231201T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, December 1 at 7:30 AM\n\nJoin oth
+ er experienced and aspiring agile coaches and professionals to: * develo
+ p and practice your coaching skills in a peer-to-peer environment * sh..
+ .\n\nhttps://www.meetup.com/techlifecolumbus/events/295907344/
+CLASS:PUBLIC
+CREATED:20230905T165042Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907344/
+LAST-MODIFIED:20230905T165042Z
+UID:event_295907344@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231209T110000
+DTEND;TZID=America/New_York:20231209T140000
+STATUS:CONFIRMED
+SUMMARY:Pair Programming & Mentoring
+DESCRIPTION:TechLife Columbus\nSaturday\, December 9 at 11:00 AM\n\nTo av
+ oid the spread of COVID-19\, we will not be offering face-to-face meetup
+ s until the pandemic resolves. Our code challenges\, curriculum and remo
+ te ...\n\nhttps://www.meetup.com/techlifecolumbus/events/sfndssyfcqbmb/
+CLASS:PUBLIC
+CREATED:20220130T192723Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sfndssyfcqbmb/
+LAST-MODIFIED:20220130T192724Z
+UID:event_sfndssyfcqbmb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231211T180000
+DTEND;TZID=America/New_York:20231211T200000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Azure
+DESCRIPTION:TechLife Columbus\nMonday\, December 11 at 6:00 PM\n\nDetails
+  coming soon!\n\nhttps://www.meetup.com/techlifecolumbus/events/sbnzlryf
+ cqbpb/
+CLASS:PUBLIC
+CREATED:20191213T130229Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sbnzlryfcqbpb/
+LAST-MODIFIED:20191213T130229Z
+UID:event_sbnzlryfcqbpb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231214T183000
+DTEND;TZID=America/New_York:20231214T210000
+STATUS:CONFIRMED
+SUMMARY:Code Jam Columbus
+DESCRIPTION:TechLife Columbus\nThursday\, December 14 at 6:30 PM\n\nAn Ev
+ ening of Kibitzing and Coding. Columbus Code Jam is a casual meetup to p
+ air on cool projects\, to get one-on-one guidance from experienced devel
+ op...\n\nhttps://www.meetup.com/techlifecolumbus/events/vzhrctyfcqbsb/
+CLASS:PUBLIC
+CREATED:20230309T172041Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vzhrctyfcqbsb/
+LAST-MODIFIED:20230309T172041Z
+UID:event_vzhrctyfcqbsb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231215T073000
+DTEND;TZID=America/New_York:20231215T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, December 15 at 7:30 AM\n\nJoin ot
+ her experienced and aspiring agile coaches and professionals to: * devel
+ op and practice your coaching skills in a peer-to-peer environment * sh.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/295907397/
+CLASS:PUBLIC
+CREATED:20230905T165431Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907397/
+LAST-MODIFIED:20230905T165431Z
+UID:event_295907397@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231218T180000
+DTEND;TZID=America/New_York:20231218T210000
+STATUS:CONFIRMED
+SUMMARY:Columbus Ruby Brigade Monthly Meeting
+DESCRIPTION:TechLife Columbus\nMonday\, December 18 at 6:00 PM\n\nplease 
+ rsvp here - https://www.meetup.com/columbusrb/events/mhlkdtyfchbtb/ AGEN
+ DA: * From 6pm - 6:30pm we'll meet at The Grizzly (from the entrance\, s
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/gsgtdtyfcqbxb/
+CLASS:PUBLIC
+CREATED:20230509T011237Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/gsgtdtyfcqbxb/
+LAST-MODIFIED:20230509T011237Z
+UID:event_gsgtdtyfcqbxb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231219T180000
+DTEND;TZID=America/New_York:20231219T200000
+STATUS:CONFIRMED
+SUMMARY:Cap City Biohackers Monthly Meetup: DIY Lab Equipment Hack
+DESCRIPTION:TechLife Columbus\nTuesday\, December 19 at 6:00 PM\n\nJoin u
+ s every third Wednesday of each month for the Cap City Biohackers Monthl
+ y Meetup. This is a  working group dedicated to finding creative DIY sol
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/vjqmqryfcqbzb/
+CLASS:PUBLIC
+CREATED:20200309T225919Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vjqmqryfcqbzb/
+LAST-MODIFIED:20200309T225919Z
+UID:event_vjqmqryfcqbzb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231221T093000
+DTEND;TZID=America/New_York:20231221T103000
+STATUS:CONFIRMED
+SUMMARY:NFT AI ART Columbus 
+DESCRIPTION:TechLife Columbus\nThursday\, December 21 at 9:30 AM\n\nNFT's
+  are here to stay folks! This is a group for like minded people interest
+ ed in understanding\, leveraging\, using\, creating for\, profiting from
+ \, tra...\n\nhttps://www.meetup.com/techlifecolumbus/events/mmzstsyfcqbc
+ c/
+CLASS:PUBLIC
+CREATED:20220426T204712Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/mmzstsyfcqbcc/
+LAST-MODIFIED:20220426T204713Z
+UID:event_mmzstsyfcqbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231221T173000
+DTEND;TZID=America/New_York:20231221T203000
+STATUS:CONFIRMED
+SUMMARY:Buckeye SharePoint User Group
+DESCRIPTION:TechLife Columbus\nThursday\, December 21 at 5:30 PM\n\nWe ar
+ e a group of local professionals with a passion for SharePoint. The grou
+ p is open to anyone with an interest in working with the SharePoint tech
+ n...\n\nhttps://www.meetup.com/techlifecolumbus/events/dpkdmcyfcqbcc/
+CLASS:PUBLIC
+CREATED:20120122T203826Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/dpkdmcyfcqbcc/
+LAST-MODIFIED:20120122T203826Z
+UID:event_dpkdmcyfcqbcc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231228T173000
+DTEND;TZID=America/New_York:20231228T193000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio .NET Developers  Group
+DESCRIPTION:TechLife Columbus\nThursday\, December 28 at 5:30 PM\n\n* Who
+  Can Attend * The Central Ohio .Net Developers Group meetings are free a
+ nd open to the public! All developers\; professional\, student\, and hob
+ bies...\n\nhttps://www.meetup.com/techlifecolumbus/events/nglqssyfcqblc/
+ 
+CLASS:PUBLIC
+CREATED:20220224T164608Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/nglqssyfcqblc/
+LAST-MODIFIED:20220224T164608Z
+UID:event_nglqssyfcqblc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20231229T073000
+DTEND;TZID=America/New_York:20231229T083000
+STATUS:CONFIRMED
+SUMMARY:Agile Coaching Circle -- IN-PERSON
+DESCRIPTION:TechLife Columbus\nFriday\, December 29 at 7:30 AM\n\nJoin ot
+ her experienced and aspiring agile coaches and professionals to: * devel
+ op and practice your coaching skills in a peer-to-peer environment * sh.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/295907352/
+CLASS:PUBLIC
+CREATED:20230905T165110Z
+GEO:39.99;-83.04
+LOCATION:Sweetwaters Coffee & Tea (4587 Bridge Park Ave\, Dublin\, OH 430
+ 17)
+URL:https://www.meetup.com/techlifecolumbus/events/295907352/
+LAST-MODIFIED:20230905T165137Z
+UID:event_295907352@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240108T180000
+DTEND;TZID=America/New_York:20240108T200000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Azure
+DESCRIPTION:TechLife Columbus\nMonday\, January 8 at 6:00 PM\n\nDetails c
+ oming soon!\n\nhttps://www.meetup.com/techlifecolumbus/events/sbnzlrygcc
+ blb/
+CLASS:PUBLIC
+CREATED:20191213T130229Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sbnzlrygccblb/
+LAST-MODIFIED:20191213T130229Z
+UID:event_sbnzlrygccblb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240111T183000
+DTEND;TZID=America/New_York:20240111T210000
+STATUS:CONFIRMED
+SUMMARY:Code Jam Columbus
+DESCRIPTION:TechLife Columbus\nThursday\, January 11 at 6:30 PM\n\nAn Eve
+ ning of Kibitzing and Coding. Columbus Code Jam is a casual meetup to pa
+ ir on cool projects\, to get one-on-one guidance from experienced develo
+ p...\n\nhttps://www.meetup.com/techlifecolumbus/events/vzhrctygccbpb/
+CLASS:PUBLIC
+CREATED:20230309T172041Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vzhrctygccbpb/
+LAST-MODIFIED:20230309T172041Z
+UID:event_vzhrctygccbpb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240113T110000
+DTEND;TZID=America/New_York:20240113T140000
+STATUS:CONFIRMED
+SUMMARY:Pair Programming & Mentoring
+DESCRIPTION:TechLife Columbus\nSaturday\, January 13 at 11:00 AM\n\nTo av
+ oid the spread of COVID-19\, we will not be offering face-to-face meetup
+ s until the pandemic resolves. Our code challenges\, curriculum and remo
+ te ...\n\nhttps://www.meetup.com/techlifecolumbus/events/sfndssygccbrb/
+CLASS:PUBLIC
+CREATED:20220130T192723Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sfndssygccbrb/
+LAST-MODIFIED:20220130T192724Z
+UID:event_sfndssygccbrb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240115T180000
+DTEND;TZID=America/New_York:20240115T210000
+STATUS:CONFIRMED
+SUMMARY:Columbus Ruby Brigade Monthly Meeting
+DESCRIPTION:TechLife Columbus\nMonday\, January 15 at 6:00 PM\n\nplease r
+ svp here - https://www.meetup.com/columbusrb/events/mhlkdtyfchbtb/ AGEND
+ A: * From 6pm - 6:30pm we'll meet at The Grizzly (from the entrance\, s.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/gsgtdtygccbtb/
+CLASS:PUBLIC
+CREATED:20230509T011237Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/gsgtdtygccbtb/
+LAST-MODIFIED:20230509T011237Z
+UID:event_gsgtdtygccbtb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240116T180000
+DTEND;TZID=America/New_York:20240116T200000
+STATUS:CONFIRMED
+SUMMARY:Cap City Biohackers Monthly Meetup: DIY Lab Equipment Hack
+DESCRIPTION:TechLife Columbus\nTuesday\, January 16 at 6:00 PM\n\nJoin us
+  every third Wednesday of each month for the Cap City Biohackers Monthly
+  Meetup. This is a  working group dedicated to finding creative DIY sol.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/vjqmqrygccbvb/
+CLASS:PUBLIC
+CREATED:20200309T225919Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vjqmqrygccbvb/
+LAST-MODIFIED:20200309T225919Z
+UID:event_vjqmqrygccbvb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240118T093000
+DTEND;TZID=America/New_York:20240118T103000
+STATUS:CONFIRMED
+SUMMARY:NFT AI ART Columbus 
+DESCRIPTION:TechLife Columbus\nThursday\, January 18 at 9:30 AM\n\nNFT's 
+ are here to stay folks! This is a group for like minded people intereste
+ d in understanding\, leveraging\, using\, creating for\, profiting from\
+ , tra...\n\nhttps://www.meetup.com/techlifecolumbus/events/mmzstsygccbxb
+ /
+CLASS:PUBLIC
+CREATED:20220426T204712Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/mmzstsygccbxb/
+LAST-MODIFIED:20220426T204713Z
+UID:event_mmzstsygccbxb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240118T173000
+DTEND;TZID=America/New_York:20240118T203000
+STATUS:CONFIRMED
+SUMMARY:Buckeye SharePoint User Group
+DESCRIPTION:TechLife Columbus\nThursday\, January 18 at 5:30 PM\n\nWe are
+  a group of local professionals with a passion for SharePoint. The group
+  is open to anyone with an interest in working with the SharePoint techn
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/dpkdmcygccbxb/
+CLASS:PUBLIC
+CREATED:20120122T203826Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/dpkdmcygccbxb/
+LAST-MODIFIED:20120122T203826Z
+UID:event_dpkdmcygccbxb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240123T180000
+DTEND;TZID=America/New_York:20240123T200000
+STATUS:CONFIRMED
+SUMMARY:Top AWS EC2 and S3 cost optimization gotchas - AWS Columbus Meetu
+ p
+DESCRIPTION:TechLife Columbus\nTuesday\, January 23 at 6:00 PM\n\nCost op
+ timization is as much of a pillar as the technical win with the cloud. R
+ ick Vanover from Veeam will share a number of learnings the Veeam Produ.
+ ..\n\nhttps://www.meetup.com/techlifecolumbus/events/295327392/
+CLASS:PUBLIC
+CREATED:20230808T204347Z
+GEO:39.99;-83.04
+LOCATION:Veeam Software (8800 Lyra Dr #450\, Columbus\, OH 43240)
+URL:https://www.meetup.com/techlifecolumbus/events/295327392/
+LAST-MODIFIED:20230808T204543Z
+UID:event_295327392@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240125T173000
+DTEND;TZID=America/New_York:20240125T193000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio .NET Developers  Group
+DESCRIPTION:TechLife Columbus\nThursday\, January 25 at 5:30 PM\n\n* Who 
+ Can Attend * The Central Ohio .Net Developers Group meetings are free an
+ d open to the public! All developers\; professional\, student\, and hobb
+ ies...\n\nhttps://www.meetup.com/techlifecolumbus/events/nglqssygccbhc/
+CLASS:PUBLIC
+CREATED:20220224T164608Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/nglqssygccbhc/
+LAST-MODIFIED:20220224T164608Z
+UID:event_nglqssygccbhc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240208T183000
+DTEND;TZID=America/New_York:20240208T210000
+STATUS:CONFIRMED
+SUMMARY:Code Jam Columbus
+DESCRIPTION:TechLife Columbus\nThursday\, February 8 at 6:30 PM\n\nAn Eve
+ ning of Kibitzing and Coding. Columbus Code Jam is a casual meetup to pa
+ ir on cool projects\, to get one-on-one guidance from experienced develo
+ p...\n\nhttps://www.meetup.com/techlifecolumbus/events/vzhrctygcdblb/
+CLASS:PUBLIC
+CREATED:20230309T172041Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vzhrctygcdblb/
+LAST-MODIFIED:20230309T172041Z
+UID:event_vzhrctygcdblb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240210T110000
+DTEND;TZID=America/New_York:20240210T140000
+STATUS:CONFIRMED
+SUMMARY:Pair Programming & Mentoring
+DESCRIPTION:TechLife Columbus\nSaturday\, February 10 at 11:00 AM\n\nTo a
+ void the spread of COVID-19\, we will not be offering face-to-face meetu
+ ps until the pandemic resolves. Our code challenges\, curriculum and rem
+ ote ...\n\nhttps://www.meetup.com/techlifecolumbus/events/sfndssygcdbnb/
+ 
+CLASS:PUBLIC
+CREATED:20220130T192723Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sfndssygcdbnb/
+LAST-MODIFIED:20220130T192724Z
+UID:event_sfndssygcdbnb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240212T180000
+DTEND;TZID=America/New_York:20240212T200000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Azure
+DESCRIPTION:TechLife Columbus\nMonday\, February 12 at 6:00 PM\n\nDetails
+  coming soon!\n\nhttps://www.meetup.com/techlifecolumbus/events/sbnzlryg
+ cdbqb/
+CLASS:PUBLIC
+CREATED:20191213T130229Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sbnzlrygcdbqb/
+LAST-MODIFIED:20191213T130229Z
+UID:event_sbnzlrygcdbqb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240215T093000
+DTEND;TZID=America/New_York:20240215T103000
+STATUS:CONFIRMED
+SUMMARY:NFT AI ART Columbus 
+DESCRIPTION:TechLife Columbus\nThursday\, February 15 at 9:30 AM\n\nNFT's
+  are here to stay folks! This is a group for like minded people interest
+ ed in understanding\, leveraging\, using\, creating for\, profiting from
+ \, tra...\n\nhttps://www.meetup.com/techlifecolumbus/events/mmzstsygcdbt
+ b/
+CLASS:PUBLIC
+CREATED:20220426T204712Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/mmzstsygcdbtb/
+LAST-MODIFIED:20220426T204713Z
+UID:event_mmzstsygcdbtb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240215T173000
+DTEND;TZID=America/New_York:20240215T203000
+STATUS:CONFIRMED
+SUMMARY:Buckeye SharePoint User Group
+DESCRIPTION:TechLife Columbus\nThursday\, February 15 at 5:30 PM\n\nWe ar
+ e a group of local professionals with a passion for SharePoint. The grou
+ p is open to anyone with an interest in working with the SharePoint tech
+ n...\n\nhttps://www.meetup.com/techlifecolumbus/events/dpkdmcygcdbtb/
+CLASS:PUBLIC
+CREATED:20120122T203826Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/dpkdmcygcdbtb/
+LAST-MODIFIED:20120122T203826Z
+UID:event_dpkdmcygcdbtb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240219T180000
+DTEND;TZID=America/New_York:20240219T210000
+STATUS:CONFIRMED
+SUMMARY:Columbus Ruby Brigade Monthly Meeting
+DESCRIPTION:TechLife Columbus\nMonday\, February 19 at 6:00 PM\n\nplease 
+ rsvp here - https://www.meetup.com/columbusrb/events/mhlkdtyfchbtb/ AGEN
+ DA: * From 6pm - 6:30pm we'll meet at The Grizzly (from the entrance\, s
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/gsgtdtygcdbzb/
+CLASS:PUBLIC
+CREATED:20230509T011237Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/gsgtdtygcdbzb/
+LAST-MODIFIED:20230509T011237Z
+UID:event_gsgtdtygcdbzb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240220T180000
+DTEND;TZID=America/New_York:20240220T200000
+STATUS:CONFIRMED
+SUMMARY:Cap City Biohackers Monthly Meetup: DIY Lab Equipment Hack
+DESCRIPTION:TechLife Columbus\nTuesday\, February 20 at 6:00 PM\n\nJoin u
+ s every third Wednesday of each month for the Cap City Biohackers Monthl
+ y Meetup. This is a  working group dedicated to finding creative DIY sol
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/vjqmqrygcdbbc/
+CLASS:PUBLIC
+CREATED:20200309T225919Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/vjqmqrygcdbbc/
+LAST-MODIFIED:20200309T225919Z
+UID:event_vjqmqrygcdbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240222T173000
+DTEND;TZID=America/New_York:20240222T193000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio .NET Developers  Group
+DESCRIPTION:TechLife Columbus\nThursday\, February 22 at 5:30 PM\n\n* Who
+  Can Attend * The Central Ohio .Net Developers Group meetings are free a
+ nd open to the public! All developers\; professional\, student\, and hob
+ bies...\n\nhttps://www.meetup.com/techlifecolumbus/events/nglqssygcdbdc/
+ 
+CLASS:PUBLIC
+CREATED:20220224T164608Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/nglqssygcdbdc/
+LAST-MODIFIED:20220224T164608Z
+UID:event_nglqssygcdbdc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240309T110000
+DTEND;TZID=America/New_York:20240309T140000
+STATUS:CONFIRMED
+SUMMARY:Pair Programming & Mentoring
+DESCRIPTION:TechLife Columbus\nSaturday\, March 9 at 11:00 AM\n\nTo avoid
+  the spread of COVID-19\, we will not be offering face-to-face meetups u
+ ntil the pandemic resolves. Our code challenges\, curriculum and remote 
+ ...\n\nhttps://www.meetup.com/techlifecolumbus/events/sfndssygcfbmb/
+CLASS:PUBLIC
+CREATED:20220130T192723Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sfndssygcfbmb/
+LAST-MODIFIED:20220130T192724Z
+UID:event_sfndssygcfbmb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20230913T085912Z
+DTSTART;TZID=America/New_York:20240311T180000
+DTEND;TZID=America/New_York:20240311T200000
+STATUS:CONFIRMED
+SUMMARY:Central Ohio Azure
+DESCRIPTION:TechLife Columbus\nMonday\, March 11 at 6:00 PM\n\nDetails co
+ ming soon!\n\nhttps://www.meetup.com/techlifecolumbus/events/sbnzlrygcfb
+ pb/
+CLASS:PUBLIC
+CREATED:20191213T130229Z
+GEO:39.99;-83.04
+URL:https://www.meetup.com/techlifecolumbus/events/sbnzlrygcfbpb/
+LAST-MODIFIED:20191213T130229Z
+UID:event_sbnzlrygcfbpb@meetup.com
+END:VEVENT
+END:VCALENDAR
