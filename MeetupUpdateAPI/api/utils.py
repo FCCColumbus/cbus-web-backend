@@ -47,6 +47,16 @@ def parse_ical_file(file_path) -> list:
     return events
 
 
+def model_parsed_file_to_class(parsed_list):
+    print("unfinished function")    
+    for my_dict in parsed_list:
+        model = MeetupIcalModel()
+        model.created_at = parsed_list["DTSTAMP"]
+
+
+
+
+
 # Current file is local. Eventually call it from Meetup api. 
 parse_ical_file('/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt')
 
