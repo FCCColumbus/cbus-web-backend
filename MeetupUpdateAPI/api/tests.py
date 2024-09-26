@@ -23,10 +23,6 @@ class UtilsTests(TestCase):
 
     def test_output_of_parse_ical_file_func(self):
         parse_ical_output = parse_ical_file(self.FILE_PATH)
-        print(type(parse_ical_output))
-        print(type(parse_ical_output[0]))
-        first_output = parse_ical_output[0]
-        print(first_output)
         uid_of_first_item = "event_vzhrctyfcmbsb@meetup.com"
         self.assertTrue(parse_ical_output[0]["UID"]==uid_of_first_item)
         
