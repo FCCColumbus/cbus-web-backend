@@ -8,7 +8,6 @@ import re
 
 # Parse ical TODO: currently set to parse txt file. Replace with icalendar logic after testing.
 def parse_ical_file(file_path) -> list:
-    print("parsing ical file")
     """Extracts events between "BEGIN:VEVENT" and "END:VEVENT" from a text file.
 
     Args:
@@ -30,7 +29,6 @@ def parse_ical_file(file_path) -> list:
             my_dict = {}
             # split str based on n/
             lines = match.splitlines() 
-            print(lines)
             try: 
                 # iterate and assign
                 for line in lines:
@@ -45,7 +43,6 @@ def parse_ical_file(file_path) -> list:
                 # TODO: handle value error for parser
                  pass
             # append obj to events
-            print(my_dict)
             events.append(my_dict)
     return events
 
