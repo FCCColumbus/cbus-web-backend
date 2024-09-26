@@ -33,7 +33,7 @@ def parse_ical_file(file_path) -> list:
                 # iterate and assign
                 for line in lines:
                     if ':' in line:
-                    # split str based on colon
+                    # split str based on first colon
                         key, value = line.split(":",1)
                     # first part is set to key and last part to value
                         my_dict[key] = value
