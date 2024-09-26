@@ -2,13 +2,13 @@ from django.test import TestCase
 import os
 from .utils import parse_ical_file
 
-
-
 class UtilsTests(TestCase):
     # base file path for tests
     @classmethod
     def setUpClass(cls):
         cls.FILE_PATH = "api/sample_tech_life_calendar.ics.txt"
+    
+    
 # _______________________________________________________________________________________   
     # TESTS BEGIN
 # _______________________________________________________________________________________   
@@ -22,8 +22,16 @@ class UtilsTests(TestCase):
 # _______________________________________________________________________________________   
 
     def test_output_of_parse_ical_file_func(self):
-        print("unfinished test")
-        self.assertEquals(True,True) 
+        parse_ical_output = parse_ical_file(self.FILE_PATH)
+        print(type(parse_ical_output))
+        print(type(parse_ical_output[0]))
+        first_output = parse_ical_output[0]
+        print(first_output)
+        uid_of_first_item = "event_vzhrctyfcmbsb@meetup.com"
+        self.assertTrue(parse_ical_output[0]["UID"]==uid_of_first_item)
         
         
 # _______________________________________________________________________________________   
+    @classmethod
+    def tearDownClass(cls):
+        pass  # No cleanup needed for this test class
