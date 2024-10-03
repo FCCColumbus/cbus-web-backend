@@ -10,4 +10,4 @@ class MeetupIcalKeysSerializer(serializers.ModelSerializer):
           'start_time', 'end_time', 'status', 
           'summary', 'description', 'event_class', 
           'author_id', 'location', 
-          'url', 'uuid']
+          'url', 'meetup_uuid']

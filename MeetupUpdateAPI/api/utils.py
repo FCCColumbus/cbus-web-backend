@@ -1,8 +1,8 @@
 from datetime import datetime
-import pytz
 from icalendar import Calendar, Event
 from .models import MeetupIcalModel
 import re
+
 
 
 
@@ -48,8 +48,6 @@ def parse_ical_file(file_path) -> list:
 
 
 def map_model_parsed_file_to_class(parsed_list) -> list:
-    print("parsed_events location: ", parsed_list[0]["LOCATION"])
-    print(type (parsed_list[0]))
     mappedEvents = []
     for event in parsed_list:
         model = MeetupIcalModel()
@@ -63,8 +61,7 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
         model.author = event.get('CREATED')
         model.location = event.get('LOCATION', None) 
         model.url = event.get('URL')
-        model.uuid = event.get('UID')
-        print("mapped model: " , model)
+        model.meetup_uuid = event.get('UID')
         mappedEvents.append(model)
     return mappedEvents
 
@@ -77,6 +74,14 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
 icalFile = '/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt'
 # returning list of event objects that match the database model after parsing and mapping
 mappedEvents = map_model_parsed_file_to_class(parse_ical_file(icalFile))
+# Save to database
+print("saving to database")
+MeetupIcalModel.objects.bulk_create(mappedEvents)
+print("did it save?")
+# Check if the data has been saved
+if MeetupIcalModel.objects.get(mappedEvents):
+    print("Data saved successfully!")
+
 
 
 # ICALENDAR LOGIC
