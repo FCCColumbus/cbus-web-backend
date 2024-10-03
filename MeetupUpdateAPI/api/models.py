@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# NOTE not parsing GEO attribute at the moment because it requires some more imports and logic. 
 class MeetupIcalModel(models.Model):
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()

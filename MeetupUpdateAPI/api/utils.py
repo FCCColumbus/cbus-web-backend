@@ -8,13 +8,13 @@ import re
 
 # Parse ical TODO: currently set to parse txt file. Replace with icalendar logic after testing.
 def parse_ical_file(file_path) -> list:
-    """Extracts events between "BEGIN:VEVENT" and "END:VEVENT" from a text file.
+    """Extracts events between "BEGIN:VEVENT" and "END:VEVENT" from a text file using Regex.
 
     Args:
         file_path (str): The path to the text file.
 
     Returns:
-        list: A list of dictionaries, each representing an event with its start and end times.
+        list: A list of dictionaries, each representing an event from Meetup.com with its start times, end times, and other attributes.
     """
 
     events = []
@@ -47,19 +47,36 @@ def parse_ical_file(file_path) -> list:
     return events
 
 
-def model_parsed_file_to_class(parsed_list):
-    print("unfinished function")    
-    for my_dict in parsed_list:
+def map_model_parsed_file_to_class(parsed_list) -> list:
+    print("parsed_events location: ", parsed_list[0]["LOCATION"])
+    print(type (parsed_list[0]))
+    mappedEvents = []
+    for event in parsed_list:
         model = MeetupIcalModel()
-        model.created_at = parsed_list["DTSTAMP"]
+        model.created_at = event.get('DTSTAMP')
+        model.updated_at = event.get('DTSTART;TZID=America/New_York')
+        model.end_time = event.get('DTEND;TZID=America/New_York')
+        model.status = event.get('STATUS')
+        model.summary = event.get('SUMMARY')
+        model.description = event.get('DESCRIPTION')
+        model.event_class = event.get('CLASS')
+        model.author = event.get('CREATED')
+        model.location = event.get('LOCATION', None) 
+        model.url = event.get('URL')
+        model.uuid = event.get('UID')
+        print("mapped model: " , model)
+        mappedEvents.append(model)
+    return mappedEvents
+
 
 
 
 
 
 # Current file is local. Eventually call it from Meetup api. 
-parse_ical_file('/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt')
-
+icalFile = '/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt'
+# returning list of event objects that match the database model after parsing and mapping
+mappedEvents = map_model_parsed_file_to_class(parse_ical_file(icalFile))
 
 
 # ICALENDAR LOGIC
