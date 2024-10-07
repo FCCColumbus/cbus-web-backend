@@ -13,8 +13,9 @@ class UtilsTests(TestCase):
         cls.FILE_PATH = "api/sample_tech_life_calendar.ics.txt"
     
     
+# TESTS BEGIN****************************************************************************
 # _______________________________________________________________________________________   
-    # TESTS BEGIN
+    # RESOURCE CHECK
 # _______________________________________________________________________________________   
     def test_connection_to_ical_file(self):
         
@@ -23,7 +24,7 @@ class UtilsTests(TestCase):
         # Assert the expected result
         self.assertEqual(file_exists, True, f"File not found at path: {self.FILE_PATH}")
 # _______________________________________________________________________________________   
-
+    # PARSE CHECK  
     def test_output_of_parse_ical_file_func(self):
         parse_ical_output = parse_ical_file(self.FILE_PATH)
         uid_of_first_item = "event_vzhrctyfcmbsb@meetup.com"
@@ -31,7 +32,8 @@ class UtilsTests(TestCase):
         
         
 # _______________________________________________________________________________________   
-
+    # DATABASE CHECKS
+# _______________________________________________________________________________________   
     def test_if_data_saved_from_ical_file(self):
         # creating simple object for model
         model = MeetupIcalModel()
@@ -57,11 +59,10 @@ class UtilsTests(TestCase):
         MeetupIcalModel.objects.filter(pk=model.uuid).delete()
         self.assertFalse(MeetupIcalModel.objects.filter(pk=model.uuid),"TEST: Item was not deleted")
 
-        
-
 # _______________________________________________________________________________________   
 
     def test_if_bulk_save_works(self):
+        # first model
         model = MeetupIcalModel()
         model.created_at = datetime.now()
         model.start_time =  datetime.now()
@@ -102,6 +103,8 @@ class UtilsTests(TestCase):
         MeetupIcalModel.objects.filter(pk=model2.uuid).delete()
         self.assertFalse(MeetupIcalModel.objects.filter(pk=model.uuid),"TEST: Item was not deleted")
         self.assertFalse(MeetupIcalModel.objects.filter(pk=model2.uuid),"TEST: Item was not deleted")
+# _______________________________________________________________________________________   
+    # TEARDOWN
 # _______________________________________________________________________________________   
     @classmethod
     def tearDownClass(cls):
