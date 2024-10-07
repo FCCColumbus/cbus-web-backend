@@ -1,6 +1,8 @@
 from django.test import TestCase
 import os
-from .utils import parse_ical_file
+from .utils import parse_ical_file, map_model_parsed_file_to_class
+from .models import MeetupIcalModel
+from datetime import datetime
 
 
 
@@ -28,6 +30,35 @@ class UtilsTests(TestCase):
         self.assertTrue(parse_ical_output[0]["UID"]==uid_of_first_item)
         
         
+# _______________________________________________________________________________________   
+
+    def test_if_data_saved_from_ical_file(self):
+        # creating simple object for model
+        model = MeetupIcalModel()
+        model.created_at = datetime.now()
+        model.start_time =  datetime.now()
+        model.end_time = datetime.now()
+        model.status = "Confirmed"
+        model.summary = "Super cool event"
+        model.description = "Lots of words"
+        model.event_class = "Public"
+        model.author = "FCCC"
+        model.location = "Online"
+        model.url = "www.google.com"
+        model.meetupUUID = "1234"
+        # saving to database
+        model.save()
+        # checking if saved
+        if model.uuid:
+            print(MeetupIcalModel.objects.get(pk=model.uuid))
+            self.assertTrue("TEST: found database item")
+        else: self.assertFalse("TEST: did not find in database")
+        # checking if deleted
+        MeetupIcalModel.objects.filter(pk=model.uuid).delete()
+        self.assertFalse(MeetupIcalModel.objects.filter(pk=model.uuid),"TEST: Item was not deleted")
+
+        
+
 # _______________________________________________________________________________________   
     @classmethod
     def tearDownClass(cls):
