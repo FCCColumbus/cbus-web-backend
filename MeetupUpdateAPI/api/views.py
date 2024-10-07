@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . import utils
+from .utils import parsing_ical
 
 
 # Create your views here.

@@ -1,6 +1,6 @@
 from django.test import TestCase
 import os
-from .utils import parse_ical_file, map_model_parsed_file_to_class
+from .utils.parsing_ical import parse_ical_file, map_model_parsed_file_to_class
 from .models import MeetupIcalModel
 from datetime import datetime
 
