@@ -61,7 +61,7 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
         model.author = event.get('CREATED')
         model.location = event.get('LOCATION', None) 
         model.url = event.get('URL')
-        model.meetup_uuid = event.get('UID')
+        model.meetupUUID = event.get('UID')
         mappedEvents.append(model)
     return mappedEvents
 
