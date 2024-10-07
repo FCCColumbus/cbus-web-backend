@@ -60,6 +60,49 @@ class UtilsTests(TestCase):
         
 
 # _______________________________________________________________________________________   
+
+    def test_if_bulk_save_works(self):
+        model = MeetupIcalModel()
+        model.created_at = datetime.now()
+        model.start_time =  datetime.now()
+        model.end_time = datetime.now()
+        model.status = "Confirmed"
+        model.summary = "Super cool event"
+        model.description = "Lots of words"
+        model.event_class = "Public"
+        model.author = "FCCC"
+        model.location = "Online"
+        model.url = "www.google.com"
+        model.meetupUUID = "1234"
+        # second model
+        model2 = MeetupIcalModel()
+        model2.created_at = datetime.now()
+        model2.start_time =  datetime.now()
+        model2.end_time = datetime.now()
+        model2.status = "Confirmed"
+        model2.summary = "Super cool event"
+        model2.description = "Lots of words"
+        model2.event_class = "Public"
+        model2.author = "FCCC"
+        model2.location = "Online"
+        model2.url = "www.google.com"
+        model2.meetupUUID = "1234"
+        # adding models into array
+        model_arr = [model,model2]
+        # saving to database
+        MeetupIcalModel.objects.bulk_create(model_arr)
+        # checking if saved
+        if model.uuid and model2:
+            print(MeetupIcalModel.objects.get(pk=model.uuid))
+            print(MeetupIcalModel.objects.get(pk=model2.uuid))
+            self.assertTrue("TEST: found database item")
+        else: self.assertFalse("TEST: did not find in database")
+        # checking if deleted
+        MeetupIcalModel.objects.filter(pk=model.uuid).delete()
+        MeetupIcalModel.objects.filter(pk=model2.uuid).delete()
+        self.assertFalse(MeetupIcalModel.objects.filter(pk=model.uuid),"TEST: Item was not deleted")
+        self.assertFalse(MeetupIcalModel.objects.filter(pk=model2.uuid),"TEST: Item was not deleted")
+# _______________________________________________________________________________________   
     @classmethod
     def tearDownClass(cls):
         pass  # No cleanup needed for this test class
