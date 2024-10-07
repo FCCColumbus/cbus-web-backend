@@ -52,14 +52,14 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
     for event in parsed_list:
         model = MeetupIcalModel()
         model.created_at = event.get('DTSTAMP')
-        model.updated_at = event.get('DTSTART;TZID=America/New_York')
+        model.start_time = event.get('DTSTART;TZID=America/New_York')
         model.end_time = event.get('DTEND;TZID=America/New_York')
         model.status = event.get('STATUS')
         model.summary = event.get('SUMMARY')
         model.description = event.get('DESCRIPTION')
         model.event_class = event.get('CLASS')
         model.author = event.get('CREATED')
-        model.location = event.get('LOCATION', None) 
+        model.location = event.get('LOCATION', "") 
         model.url = event.get('URL')
         model.meetupUUID = event.get('UID')
         mappedEvents.append(model)
@@ -72,15 +72,22 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
 
 # Current file is local. Eventually call it from Meetup api. 
 icalFile = '/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt'
+
 # returning list of event objects that match the database model after parsing and mapping
 mappedEvents = map_model_parsed_file_to_class(parse_ical_file(icalFile))
+
 # Save to database
-print("saving to database")
+print("Saving to database")
 MeetupIcalModel.objects.bulk_create(mappedEvents)
-print("did it save?")
+
 # Check if the data has been saved
-if MeetupIcalModel.objects.get(mappedEvents):
+count_after = MeetupIcalModel.objects.count()
+print(f"Number of objects in the database: {count_after}")
+
+if count_after > 0:
     print("Data saved successfully!")
+else:
+    print("No data was saved.")
 
 
 

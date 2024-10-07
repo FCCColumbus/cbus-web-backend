@@ -1,6 +1,7 @@
 from django.db import models
 import pytz
 from django.utils import timezone
+import uuid
 
 # NOTE not parsing GEO attribute at the moment because it requires some more imports and logic. 
 class MeetupIcalModel(models.Model):
@@ -13,10 +14,10 @@ class MeetupIcalModel(models.Model):
     description = models.TextField()
     event_class = models.CharField(max_length=100)
     author = models.CharField(max_length=100) 
-    location = models.CharField(max_length=255, blank=True)
+    location = models.CharField(max_length=255, blank=True, null=True)
     url = models.URLField()
     meetupUUID = models.CharField(max_length=200, default='')
-    uuid = models.UUIDField()
+    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     
     def __str__(self):
