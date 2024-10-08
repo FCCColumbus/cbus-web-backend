@@ -3,6 +3,9 @@ import os
 from .utils.parsing_ical import parse_ical_file, map_model_parsed_file_to_class
 from .models import MeetupIcalModel
 from datetime import datetime
+from io import BytesIO
+import requests
+import logging
 
 
 
@@ -17,6 +20,29 @@ class UtilsTests(TestCase):
 # _______________________________________________________________________________________   
     # RESOURCE CHECK
 # _______________________________________________________________________________________   
+
+
+    def test_connection_to_meetup_api(self):
+        # Set up logging
+        logging.basicConfig(level=logging.INFO)
+        logger = logging.getLogger(__name__)
+
+       
+        # memberid = fcccolumbus614@gmail.com, file = tech_life_calendar.ics
+        export_meetup_calendar("276932425", "https://www.meetup.com/techlifecolumbus/events/ical/", "15CscXC8lA0vGlAn9ZxjCX8628f0wStX24wK1DhbxBu4")
+
+        def export_meetup_calendar(meetup_member_id, calendar_url, export_file_id):
+            try:
+                cookie = f"MEETUP_MEMBER=id={meetup_member_id}&status=1&timestamp=1685662475&bs=0&tz=US%2FEastern&ql=false&scope=ALL&rem=1;"
+                logger.info("Fetching events...")
+            
+                response = requests.get(calendar_url, headers={"cookie": cookie})
+                response.raise_for_status()  # Raises an HTTPError for bad responses
+                logger.info("Success!")
+            except Exception as e:
+                logger.error(f"An exception occurred: {e}")
+                raise
+
     def test_connection_to_ical_file(self):
         
         # Check if the file exists using os.path.exists()
