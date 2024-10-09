@@ -5,3 +5,4 @@ environs
 django_geopostcodes 
 icalendar
 pytz
+requests

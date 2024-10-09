@@ -2,6 +2,7 @@ from datetime import datetime
 from icalendar import Calendar, Event
 from ..models import MeetupIcalModel
 import re
+from .get_ical import export_techlife_calendar
 
 
 
@@ -18,7 +19,7 @@ import re
 # PARSING 
 
 
-def parse_ical_file(file_path) -> list:
+def parse_ical_file(response_data) -> list:
     """Extracts events between "BEGIN:VEVENT" and "END:VEVENT" from a text file using Regex.
 
     Args:
@@ -29,8 +30,10 @@ def parse_ical_file(file_path) -> list:
     """
 
     events = []
-    with open(file_path, 'r') as f:
-        text = f.read()
+    # TODO Need to change this to handle the response data from get_ical.py
+    text = response_data.text
+    # with open(file_path, 'r') as f:
+    #     text = f.read()
 
         # Regular expression to match events
         pattern = r"BEGIN:VEVENT\n(.*?)\nEND:VEVENT"
@@ -93,7 +96,8 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
 
 
 # Current file is local. Eventually call it from Meetup api. 
-icalFile = '/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt'
+# icalFile = '/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt'
+icalFile = export_techlife_calendar()
 
 # returning list of event objects that match the database model after parsing and mapping
 mappedEvents = map_model_parsed_file_to_class(parse_ical_file(icalFile))
