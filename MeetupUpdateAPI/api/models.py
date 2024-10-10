@@ -1,5 +1,5 @@
 from django.db import models
-import pytz
+import secrets
 from django.utils import timezone
 import uuid
 
@@ -31,3 +31,17 @@ class MeetupIcalModel(models.Model):
         return self.summary
 
         
+
+
+class APIKey(models.Model):
+    key = models.CharField(max_length=64, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_used = models.DateTimeField(auto_now=True)
+
+    @classmethod
+    def generate_key(cls):
+        return secrets.token_urlsafe(48)  # Generates a 64-character key
+
+    @classmethod
+    def create_new_key(cls):
+        return cls.objects.create(key=cls.generate_key())
