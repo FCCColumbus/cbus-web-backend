@@ -5,15 +5,21 @@ from .models import MeetupIcalModel
 from django.views.decorators.http import require_GET
 from django.conf import settings
 
+
 def check_origin(view_func):
     def wrapped_view(request, *args, **kwargs):
         # Check API Key
-        if request.GET.get('api_key') != settings.SECRET_KEY:
+        print(settings.SECRET_KEY)
+        print(request.GET.get('api_key'))
+        if request.GET.get('api_key') != settings.API_KEY:
             return JsonResponse({'error': 'Invalid API key'}, status=403)
 
         # Check Referer
         referer = request.META.get('HTTP_REFERER', '')
-        if not referer.startswith(settings.ALLOWED_ORIGIN):
+        if not referer:
+    # Handle the case where the referrer is not present
+            return JsonResponse({'error': 'Referrer header missing'}, status=403)
+        if referer not in settings.ALLOWED_ORIGIN:
             return JsonResponse({'error': 'Unauthorized origin'}, status=403)
 
         return view_func(request, *args, **kwargs)
@@ -26,7 +32,7 @@ class MeetupView(View):
     def get(self, request):
         # Your logic for GET requests
         meetups = MeetupIcalModel.objects.all()
-        meetup_data = list(meetups.values('uid', 'summary', 'description', 'start_time', 'end_time'))
+        meetup_data = list(meetups.values('meetupUUID', 'summary', 'description', 'start_time', 'end_time'))
         return JsonResponse({'meetups': meetup_data})
 
     @method_decorator(check_origin)

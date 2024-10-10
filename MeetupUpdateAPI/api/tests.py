@@ -6,6 +6,7 @@ from datetime import datetime
 from io import BytesIO
 import logging
 from .utils.get_ical import export_meetup_calendar, export_techlife_calendar
+from django.conf import settings
 
 
 
@@ -39,7 +40,17 @@ class UtilsTests(TestCase):
         calendar_item = parse_ical_file_with_icalendar(json_from_meetup)[0]
         self.assertTrue(type(calendar_item)==dict, "incorrect datatype. Must be a dict")
         
-        
+# _______________________________________________________________________________________   
+    # SECURITY CHECKS
+    def test_secret_key(self):
+        # Check if the SECRET_KEY environment variable is set
+        secret_key = os.environ.get('SECRET_KEY')
+        print("environ key: ", secret_key)
+        api_key = settings.SECRET_KEY
+        print("settings key: ", api_key)
+        self.assertIsNotNone(secret_key, "TEST: SECRET_KEY environment variable is not set")
+        self.assertTrue(secret_key == api_key, "TEST: SECRET_KEY environment variable does not match settings.SECRET_KEY")
+# _______________________________________________________________________________________    
         
 # _______________________________________________________________________________________   
     # DATABASE CHECKS
