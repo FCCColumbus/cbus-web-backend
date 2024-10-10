@@ -58,14 +58,14 @@ def parse_ical_file_with_icalendar(response_data: bytes) -> list:
                 'url': event.get('url', ''),
             }
             events.append(event_data)
-        print("list of events: " , events[0]["summary"])
         return events
 
     except Exception as e:
         print(f"An error occurred while parsing the iCalendar data: {e}")
         return []
 # ____________________________________________________________________________________________________________________ 
-def parse_ical_file_with_regex(file_string_data: str) -> list:
+# BUG: Needs to be refactored. Getting nothing back
+def parse_ical_file_with_regex(file_string_data: bytes) -> list:
     """Extracts events between "BEGIN:VEVENT" and "END:VEVENT" from a text file using Regex.
 
     Args:
@@ -74,14 +74,14 @@ def parse_ical_file_with_regex(file_string_data: str) -> list:
     Returns:
         list: A list of dictionaries, each representing an event from Meetup.com with its start times, end times, and other attributes.
     """
-
+ 
     events = []
-
-    text = file_string_data
+ # Decode the response data (bytes) into a string
+    response_text = file_string_data.decode('utf-8')
         # Regular expression to match events
     pattern = r"BEGIN:VEVENT\n(.*?)\nEND:VEVENT"
 
-    for match in re.findall(pattern, text, re.DOTALL):
+    for match in re.findall(pattern, response_text, re.DOTALL):
         # create a dictionary with match
         my_dict = {}
         # split str based on n/

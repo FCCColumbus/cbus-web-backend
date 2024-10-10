@@ -18,6 +18,13 @@ class MeetupIcalModel(models.Model):
     url = models.URLField()
     meetupUUID = models.CharField(max_length=200, default='')
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+
+    def save(self, *args, **kwargs):
+        if self.start_time and timezone.is_naive(self.start_time):
+            self.start_time = timezone.make_aware(self.start_time)
+        if self.end_time and timezone.is_naive(self.end_time):
+            self.end_time = timezone.make_aware(self.end_time)
+        super().save(*args, **kwargs)
     
     
     def __str__(self):

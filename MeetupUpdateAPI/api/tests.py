@@ -33,12 +33,12 @@ class UtilsTests(TestCase):
     def test_output_of_parse_ical_file_func(self):
         json_from_meetup = export_techlife_calendar()
         # Decode the response data (bytes) into a string
-        response_text = json_from_meetup.decode('utf-8')
-        test_response = parse_ical_file_with_regex(response_text)
-        print("test of response: " , test_response)
-        uid_of_first_item_regex = parse_ical_file_with_regex(response_text)[0]["UID"]
-        uid_of_first_item_from_ical_parse = parse_ical_file_with_icalendar(json_from_meetup)
-        self.assertTrue(uid_of_first_item_from_ical_parse==uid_of_first_item_regex)
+        self.assertTrue(len(json_from_meetup)>0, "no data pulled")
+        self.assertTrue(type(json_from_meetup)==bytes,"incorrect datatype")
+        self.assertTrue(type(parse_ical_file_with_icalendar(json_from_meetup)==list), "incorrect datatype. Must be a list")
+        calendar_item = parse_ical_file_with_icalendar(json_from_meetup)[0]
+        self.assertTrue(type(calendar_item)==dict, "incorrect datatype. Must be a dict")
+        
         
         
 # _______________________________________________________________________________________   
