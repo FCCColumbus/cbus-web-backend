@@ -1,11 +1,11 @@
 from django.test import TestCase
 import os
-from .utils.parsing_ical import parse_ical_file, map_model_parsed_file_to_class
+from .utils.parsing_ical import parse_ical_file_with_icalendar, map_model_parsed_file_to_class, parse_ical_file_with_regex
 from .models import MeetupIcalModel
 from datetime import datetime
 from io import BytesIO
 import logging
-from utils.get_ical import export_meetup_calendar
+from .utils.get_ical import export_meetup_calendar, export_techlife_calendar
 
 
 
@@ -28,18 +28,17 @@ class UtilsTests(TestCase):
             self.assertTrue("TEST: Connection to Meetup API was successful")
 
 
-    def test_connection_to_ical_file(self):
-        
-        # Check if the file exists using os.path.exists()
-        file_exists = os.path.exists(self.FILE_PATH)
-        # Assert the expected result
-        self.assertEqual(file_exists, True, f"File not found at path: {self.FILE_PATH}")
 # _______________________________________________________________________________________   
     # PARSE CHECK  
     def test_output_of_parse_ical_file_func(self):
-        parse_ical_output = parse_ical_file(self.FILE_PATH)
-        uid_of_first_item = "event_vzhrctyfcmbsb@meetup.com"
-        self.assertTrue(parse_ical_output[0]["UID"]==uid_of_first_item)
+        json_from_meetup = export_techlife_calendar()
+        # Decode the response data (bytes) into a string
+        response_text = json_from_meetup.decode('utf-8')
+        test_response = parse_ical_file_with_regex(response_text)
+        print("test of response: " , test_response)
+        uid_of_first_item_regex = parse_ical_file_with_regex(response_text)[0]["UID"]
+        uid_of_first_item_from_ical_parse = parse_ical_file_with_icalendar(json_from_meetup)
+        self.assertTrue(uid_of_first_item_from_ical_parse==uid_of_first_item_regex)
         
         
 # _______________________________________________________________________________________   
@@ -55,7 +54,7 @@ class UtilsTests(TestCase):
         model.summary = "Super cool event"
         model.description = "Lots of words"
         model.event_class = "Public"
-        model.author = "FCCC"
+        # model.author = "FCCC"
         model.location = "Online"
         model.url = "www.google.com"
         model.meetupUUID = "1234"
@@ -63,7 +62,6 @@ class UtilsTests(TestCase):
         model.save()
         # checking if saved
         if model.uuid:
-            print(MeetupIcalModel.objects.get(pk=model.uuid))
             self.assertTrue("TEST: found database item")
         else: self.assertFalse("TEST: did not find in database")
         # checking if deleted
@@ -82,7 +80,7 @@ class UtilsTests(TestCase):
         model.summary = "Super cool event"
         model.description = "Lots of words"
         model.event_class = "Public"
-        model.author = "FCCC"
+        # model.author = "FCCC"
         model.location = "Online"
         model.url = "www.google.com"
         model.meetupUUID = "1234"
@@ -95,7 +93,7 @@ class UtilsTests(TestCase):
         model2.summary = "Super cool event"
         model2.description = "Lots of words"
         model2.event_class = "Public"
-        model2.author = "FCCC"
+        # model2.author = "FCCC"
         model2.location = "Online"
         model2.url = "www.google.com"
         model2.meetupUUID = "1234"
@@ -105,8 +103,6 @@ class UtilsTests(TestCase):
         MeetupIcalModel.objects.bulk_create(model_arr)
         # checking if saved
         if model.uuid and model2:
-            print(MeetupIcalModel.objects.get(pk=model.uuid))
-            print(MeetupIcalModel.objects.get(pk=model2.uuid))
             self.assertTrue("TEST: found database item")
         else: self.assertFalse("TEST: did not find in database")
         # checking if deleted

@@ -13,7 +13,7 @@ class MeetupIcalModel(models.Model):
     summary = models.TextField()
     description = models.TextField()
     event_class = models.CharField(max_length=100)
-    author = models.CharField(max_length=100) 
+    # author = models.CharField(max_length=100) 
     location = models.CharField(max_length=255, blank=True, null=True)
     url = models.URLField()
     meetupUUID = models.CharField(max_length=200, default='')
