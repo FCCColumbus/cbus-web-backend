@@ -20,5 +20,5 @@ from api.views import MeetupView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('meetups/', MeetupView.as_view(), name='meetups')
+    path('meetups/', MeetupView.as_view(), name='meetup')
 ]

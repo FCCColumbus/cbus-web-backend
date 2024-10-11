@@ -21,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Get the SECRET_KEY from the environment
 SECRET_KEY = os.getenv('SECRET_KEY')
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(' ')
-ALLOWED_ORIGIN = os.getenv('ALLOWED_ORIGIN', '').split(' ')
+CORS_ALLOWED_ORIGIN = os.getenv('ALLOWED_ORIGIN', '').split(' ')
+API_KEY = os.getenv('API_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -45,9 +46,11 @@ INSTALLED_APPS = [
     "api",
     "rest_framework",
     "rest_framework.authtoken",
+    "corsheaders",
+]
      
 
-]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -57,8 +60,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
-# API_KEY = os.getenv('API_KEY')
-API_KEY = 'YOMAMA'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -68,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'MeetupUpdateAPI.urls'

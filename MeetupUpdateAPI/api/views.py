@@ -1,37 +1,30 @@
-from django.utils.decorators import method_decorator
-from django.http import JsonResponse
-# from django.views import View
-from .models import MeetupIcalModel
-from django.views.decorators.http import require_GET
-from django.conf import settings
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-
+from django.http import JsonResponse
+from .models import MeetupIcalModel
+from django.http import JsonResponse
+from django.conf import settings
+from functools import wraps
+from django.utils.decorators import method_decorator
 
 def check_origin(view_func):
-    print("check_origin decorator called")
+    @wraps(view_func)
     def wrapped_view(request, *args, **kwargs):
-    #     # Check Referer
-    #     referer = request.META.get('HTTP_REFERER', '')
-    #     if not referer:
-    # # Handle the case where the referrer is not present
-    #         return JsonResponse({'error': 'Referrer header missing'}, status=403)
-    #     if referer not in settings.ALLOWED_ORIGIN:
-    #         return JsonResponse({'error': 'Unauthorized origin'}, status=403)
-
+        origin = request.META.get('HTTP_ORIGIN')
+        if origin not in settings.CORS_ALLOWED_ORIGINS:
+            return JsonResponse({'error': 'Unauthorized origin'}, status=403)
         return view_func(request, *args, **kwargs)
     return wrapped_view
-
-
+    
 class MeetupView(APIView):
-    # @method_decorator(require_GET)
-    # @method_decorator(check_origin)
+    permission_classes = [IsAuthenticated]
+
     def get(self, request):
-        # Your logic for GET requests
         print("GET request received")
         print(f"User: {request.user}")
         print(f"Auth: {request.auth}")
+        print(f"Headers: {request.META}")
         
         if not request.user.is_authenticated:
             return Response({"error": "Authentication failed"}, status=401)
