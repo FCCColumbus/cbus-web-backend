@@ -20,7 +20,6 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 # Get the SECRET_KEY from the environment
 SECRET_KEY = os.getenv('SECRET_KEY')
-API_KEY = os.getenv('API_KEY')
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(' ')
 ALLOWED_ORIGIN = os.getenv('ALLOWED_ORIGIN', '').split(' ')
 
@@ -45,9 +44,21 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "api",
     "rest_framework",
+    "rest_framework.authtoken",
      
 
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'MeetupUpdateAPI.custom_auth.APIKeyAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
+# API_KEY = os.getenv('API_KEY')
+API_KEY = 'YOMAMA'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
