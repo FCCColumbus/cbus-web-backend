@@ -4,19 +4,8 @@ from rest_framework.permissions import IsAuthenticated
 from django.http import JsonResponse
 from .models import MeetupIcalModel
 from django.http import JsonResponse
-from django.conf import settings
-from functools import wraps
-from django.utils.decorators import method_decorator
 
-def check_origin(view_func):
-    @wraps(view_func)
-    def wrapped_view(request, *args, **kwargs):
-        origin = request.META.get('HTTP_ORIGIN')
-        if origin not in settings.CORS_ALLOWED_ORIGINS:
-            return JsonResponse({'error': 'Unauthorized origin'}, status=403)
-        return view_func(request, *args, **kwargs)
-    return wrapped_view
-    
+# TODO: maybe add allowed_origins in the future
 class MeetupView(APIView):
     permission_classes = [IsAuthenticated]
 
