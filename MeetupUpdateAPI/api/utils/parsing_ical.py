@@ -137,46 +137,9 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
 # _____________________________________________________________________________________________
 
 
-# Current file is local. Eventually call it from Meetup api. 
-# icalFile = '/home/guregu/Gitter/FCCC_basic_DJANGO_API/MeetupUpdateAPI/api/sample_tech_life_calendar.ics.txt'
-icalFile = export_techlife_calendar()
 
-# returning list of event objects that match the database model after parsing and mapping
-mappedEvents = map_model_parsed_file_to_class(parse_ical_file_with_icalendar(icalFile))
+def get_meetup_events():
+    return export_techlife_calendar()
 
-# Check for new data
-new_events = []
-existing_events = set(MeetupIcalModel.objects.values_list('meetupUUID', flat=True))
-
-for event in mappedEvents:
-   if event.meetupUUID not in existing_events:
-       new_events.append(event) 
-
-# Use a transaction to ensure data integrity
-with transaction.atomic():
-    # Save to database
-    print("Saving to database")
-    MeetupIcalModel.objects.bulk_create(new_events)
-
-    # Update existing events
-    # BUG: need to handle for None
-    if existing_events:
-        fields_to_update = [f.name for f in MeetupIcalModel._meta.fields if f.name != 'meetupUUID']
-        MeetupIcalModel.objects.bulk_update(existing_events, fields_to_update)
-
-# Check if the data has been saved
-count_after = MeetupIcalModel.objects.count()
-print(f"Number of objects in the database: {count_after}")
-
-if count_after > 0:
-    print("Data saved successfully!")
-else:
-    print("No data was saved.")
-
-
-# END OF CODE
-# **************************************************************************************** 
-# **************************************************************************************** 
-
-
-
+def parse_and_map_events(icalFile:bytes):
+    return map_model_parsed_file_to_class(parse_ical_file_with_icalendar(icalFile))
