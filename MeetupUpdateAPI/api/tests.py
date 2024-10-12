@@ -45,9 +45,7 @@ class UtilsTests(TestCase):
     def test_secret_key(self):
         # Check if the SECRET_KEY environment variable is set
         secret_key = os.environ.get('SECRET_KEY')
-        print("environ key: ", secret_key)
         api_key = settings.SECRET_KEY
-        print("settings key: ", api_key)
         self.assertIsNotNone(secret_key, "TEST: SECRET_KEY environment variable is not set")
         self.assertTrue(secret_key == api_key, "TEST: SECRET_KEY environment variable does not match settings.SECRET_KEY")
 # _______________________________________________________________________________________    

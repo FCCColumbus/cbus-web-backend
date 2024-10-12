@@ -4,6 +4,7 @@ from ..models import MeetupIcalModel
 import re
 from .get_ical import export_techlife_calendar
 import pytz
+from django.db import transaction
 
 
 
@@ -143,9 +144,25 @@ icalFile = export_techlife_calendar()
 # returning list of event objects that match the database model after parsing and mapping
 mappedEvents = map_model_parsed_file_to_class(parse_ical_file_with_icalendar(icalFile))
 
-# Save to database
-print("Saving to database")
-MeetupIcalModel.objects.bulk_create(mappedEvents)
+# Check for new data
+new_events = []
+existing_events = set(MeetupIcalModel.objects.values_list('meetupUUID', flat=True))
+
+for event in mappedEvents:
+   if event.meetupUUID not in existing_events:
+       new_events.append(event) 
+
+# Use a transaction to ensure data integrity
+with transaction.atomic():
+    # Save to database
+    print("Saving to database")
+    MeetupIcalModel.objects.bulk_create(new_events)
+
+    # Update existing events
+    # BUG: need to handle for None
+    if existing_events:
+        fields_to_update = [f.name for f in MeetupIcalModel._meta.fields if f.name != 'meetupUUID']
+        MeetupIcalModel.objects.bulk_update(existing_events, fields_to_update)
 
 # Check if the data has been saved
 count_after = MeetupIcalModel.objects.count()
