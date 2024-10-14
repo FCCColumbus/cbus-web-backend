@@ -9,10 +9,9 @@ logger = logging.getLogger(__name__)
 
 
 def get_techlife_calendar():
+    logger.info("Getting techlife calendar...")
     MEETUP_API_KEY = os.getenv('MEETUP_ID')
-    logger.warning(f"This api key: {MEETUP_API_KEY} is invalid")
     MEETUP_EXPORT_URL = os.getenv('MEETUP_EXPORT_URL')
-    logger.warning(f"This api url: {MEETUP_EXPORT_URL} is invalid")
     return export_meetup_calendar(MEETUP_API_KEY, MEETUP_EXPORT_URL)
 # ___________________________________________________________________________________________________________________________
 def export_meetup_calendar(meetup_member_id, calendar_url):
@@ -27,7 +26,7 @@ def export_meetup_calendar(meetup_member_id, calendar_url):
         logger.info("Success!")
         return response.content 
     except Exception as e:
-        logger.error(f"An exception occurred: {e}")
+        logger.error(f"An exception occurred while fetching data from meetup API: {e}")
         raise
 
 if __name__ == "__main__":
