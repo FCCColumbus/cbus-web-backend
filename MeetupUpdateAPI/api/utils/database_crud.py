@@ -1,7 +1,15 @@
 from ..models import MeetupIcalModel
 from django.db import transaction
 from django.core.exceptions import ObjectDoesNotExist
+from django.core.cache import cache
+from django.utils import timezone
+from datetime import timedelta
+from .get_ical import get_techlife_calendar
+from .parsing_ical import parse_icalendar_and_map_events
 
+
+
+# TODO: add error handling
 
 def delete_single_object(Model, model_uuid):
     """deletes an item from the database
@@ -108,3 +116,48 @@ def update_and_save_events_to_database(mappedEvents:list):
         print("No data was saved.")
 
 # You can call this function when needed, not at module import time
+# ___________________________________________________________________________________________________________________________
+
+
+
+def rate_limited_auto_update():
+    """
+    This function wraps the auto_update function and ensures it's not called
+    more than once per hour.
+    """
+    # Key for storing the last execution time in cache
+    CACHE_KEY = 'last_auto_update_time'
+    
+    # Get the current time
+    now = timezone.now()
+    
+    # Get the last execution time from cache
+    last_execution = cache.get(CACHE_KEY)
+    
+    # If last_execution is None or if more than an hour has passed
+    if last_execution is None or now - last_execution > timedelta(hours=1):
+        # Call the auto_update function
+        auto_update()
+        
+        # Update the last execution time in cache
+        cache.set(CACHE_KEY, now)
+        return "Update performed successfully"
+    else:
+        # If less than an hour has passed, don't perform the update
+        time_since_last = now - last_execution
+        return f"Update skipped. Last update was {time_since_last.total_seconds() / 60:.2f} minutes ago"
+
+def auto_update():
+    """
+    This function is designed to be called periodically (e.g., every hour or day)
+    to ensure that the database is kept up-to-date with the latest events from Meetup.
+    """
+    # Implement your logic here
+    print("Performing update...")
+    ical_events = get_techlife_calendar()
+    mapped_events = parse_icalendar_and_map_events(ical_events)
+    update_and_save_events_to_database(mapped_events)
+    print("Update completed.")
+    # Your update logic goes here
+
+# ___________________________________________________________________________________________________________________________

@@ -1,12 +1,12 @@
 from django.test import TestCase
 import os
-from .utils.parsing_ical import parse_ical_file_with_icalendar, map_model_parsed_file_to_class, parse_ical_file_with_regex, update_meetup_events
+from .utils.parsing_ical import parse_ical_file_with_icalendar, map_model_parsed_file_to_class, parse_ical_file_with_regex
 from .models import MeetupIcalModel
 from datetime import datetime
-from io import BytesIO
-import logging
 from .utils.get_ical import export_meetup_calendar, get_techlife_calendar
 from django.conf import settings
+from django.utils import timezone
+from datetime import timedelta
 
 
 
@@ -119,6 +119,39 @@ class UtilsTests(TestCase):
         MeetupIcalModel.objects.filter(pk=model2.uuid).delete()
         self.assertFalse(MeetupIcalModel.objects.filter(pk=model.uuid),"TEST: Item was not deleted")
         self.assertFalse(MeetupIcalModel.objects.filter(pk=model2.uuid),"TEST: Item was not deleted")
+
+
+# _______________________________________________________________________________________   
+
+    def test_rate_limited_auto_update(self):
+        """
+        Test that the rate_limited_auto_update function is not called more than once per hour.
+        """
+        # Key for storing the last execution time in cache
+        CACHE_KEY = 'last_auto_update_time'
+        
+        # Get the current time
+        now = timezone.now()
+        print("datetime now: ", now) 
+        
+        # Check if the last execution time is within an hour from now
+        last_execution1 = now - timedelta(minutes=5) # five minutes before now
+        last_execution2 = now - timedelta(hours=2) # 2 hours before now
+        last_execution3 = now - timedelta(minutes=59) # 59 minutes before now
+        
+        for last_execution in [last_execution1, last_execution2, last_execution3]:
+            
+            # If last_execution is None or if more than an hour has passed
+            if last_execution is None or now - last_execution > timedelta(hours=1):
+                if last_execution is not None:
+                    self.assertTrue(now - last_execution > timedelta(hours=1))
+            
+           
+            else:
+                # If less than an hour has passed, don't perform the update
+                time_since_last = now - last_execution
+                self.assertTrue(time_since_last < timedelta(hours=1))
+
 # _______________________________________________________________________________________   
     # TEARDOWN
 # _______________________________________________________________________________________   

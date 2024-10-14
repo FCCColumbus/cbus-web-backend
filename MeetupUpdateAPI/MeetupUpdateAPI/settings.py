@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'MeetupUpdateAPI.custom_auth.APIKeyAuthentication',
+        'MeetupUpdateAPI.auth.APIKeyAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
