@@ -2,20 +2,16 @@ from datetime import datetime
 import icalendar
 from ..models import MeetupIcalModel
 import re
-from .get_ical import export_techlife_calendar
 import pytz
-from django.db import transaction
 
 
-
-
-# Parse ical TODO: currently set to parse txt file. Replace with icalendar logic after testing.
 # TODO: need to add error handling for all functions.
 # *********************************************************************************************
 # MAIN FUNCTIONS
 # *********************************************************************************************
-# _____________________________________________________________________________________________
-# GET DATA FROM MEETUP 
+
+def parse_icalendar_and_map_events(icalFile:bytes):
+    return map_model_parsed_file_to_class(parse_ical_file_with_icalendar(icalFile))
 
 # _____________________________________________________________________________________________
 # PARSING 
@@ -66,6 +62,7 @@ def parse_ical_file_with_icalendar(response_data: bytes) -> list:
         return []
 # ____________________________________________________________________________________________________________________ 
 # BUG: Needs to be refactored. Getting nothing back
+
 def parse_ical_file_with_regex(file_string_data: bytes) -> list:
     """Extracts events between "BEGIN:VEVENT" and "END:VEVENT" from a text file using Regex.
 
@@ -133,13 +130,3 @@ def map_model_parsed_file_to_class(parsed_list) -> list:
 
 # _____________________________________________________________________________________________
 # *********************************************************************************************
-# LOGIC
-# _____________________________________________________________________________________________
-
-
-
-def get_meetup_events():
-    return export_techlife_calendar()
-
-def parse_and_map_events(icalFile:bytes):
-    return map_model_parsed_file_to_class(parse_ical_file_with_icalendar(icalFile))

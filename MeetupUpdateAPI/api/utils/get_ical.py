@@ -6,7 +6,7 @@ from . import parsing_ical
 
 
 
-def export_techlife_calendar():
+def get_techlife_calendar():
     
     # memberid = fcccolumbus614@gmail.com, file = tech_life_calendar.ics
     return export_meetup_calendar("276932425", "https://www.meetup.com/techlifecolumbus/events/ical/")
@@ -29,4 +29,4 @@ def export_meetup_calendar(meetup_member_id, calendar_url):
         raise
 
 if __name__ == "__main__":
-    export_techlife_calendar()
+    get_techlife_calendar()

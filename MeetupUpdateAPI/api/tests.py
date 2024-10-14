@@ -5,7 +5,7 @@ from .models import MeetupIcalModel
 from datetime import datetime
 from io import BytesIO
 import logging
-from .utils.get_ical import export_meetup_calendar, export_techlife_calendar
+from .utils.get_ical import export_meetup_calendar, get_techlife_calendar
 from django.conf import settings
 
 
@@ -32,7 +32,7 @@ class UtilsTests(TestCase):
 # _______________________________________________________________________________________   
     # PARSE CHECK  
     def test_output_of_parse_ical_file_func(self):
-        json_from_meetup = export_techlife_calendar()
+        json_from_meetup = get_techlife_calendar()
         # Decode the response data (bytes) into a string
         self.assertTrue(len(json_from_meetup)>0, "no data pulled")
         self.assertTrue(type(json_from_meetup)==bytes,"incorrect datatype")
