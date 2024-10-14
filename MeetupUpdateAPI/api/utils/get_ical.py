@@ -1,20 +1,22 @@
 import requests
 import logging
-from . import parsing_ical
-# might not need this: export_file_id = "15CscXC8lA0vGlAn9ZxjCX8628f0wStX24wK1DhbxBu4"
+import os
+from dotenv import load_dotenv
 
-
+load_dotenv()
+# setup logger
+logger = logging.getLogger(__name__)
 
 
 def get_techlife_calendar():
-    
-    # memberid = fcccolumbus614@gmail.com, file = tech_life_calendar.ics
-    return export_meetup_calendar("276932425", "https://www.meetup.com/techlifecolumbus/events/ical/")
+    MEETUP_API_KEY = os.getenv('MEETUP_ID')
+    logger.warning(f"This api key: {MEETUP_API_KEY} is invalid")
+    MEETUP_EXPORT_URL = os.getenv('MEETUP_EXPORT_URL')
+    logger.warning(f"This api url: {MEETUP_EXPORT_URL} is invalid")
+    return export_meetup_calendar(MEETUP_API_KEY, MEETUP_EXPORT_URL)
 # ___________________________________________________________________________________________________________________________
 def export_meetup_calendar(meetup_member_id, calendar_url):
     # Set up logging
-    logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger(__name__)
     try:
         cookie = f"MEETUP_MEMBER=id={meetup_member_id}&status=1&timestamp=1685662475&bs=0&tz=US%2FEastern&ql=false&scope=ALL&rem=1;"
         logger.info("Fetching events...")
