@@ -10,16 +10,17 @@ logger = logging.getLogger(__name__)
 class APIKeyAuthentication(authentication.BaseAuthentication):
     def authenticate(self, request):
 
-        # Check Host header
-        host = request.META.get('HTTP_HOST')
-        if host not in settings.ALLOWED_HOSTS:
-            logger.warning(f"Invalid host: {host}")
-            raise exceptions.AuthenticationFailed('Invalid host')
+# TODO: add when production url is ready
+        # # Check Host header
+        # host = request.META.get('HTTP_HOST')
+        # if host not in settings.ALLOWED_HOSTS:
+        #     logger.warning(f"Invalid host: {host}")
+        #     raise exceptions.AuthenticationFailed('Invalid host')
 
         api_key = request.META.get('HTTP_X_API_KEY')
         logger.info(f"API key: {api_key} is authentic") 
         if not api_key:
-            logger.warning(f"{host} did not provide an API key")
+            logger.warning(f"API key not provided from {request.META.get('REMOTE_ADDR')}")
             return None
         if api_key != settings.API_KEY:
             logger.warning(

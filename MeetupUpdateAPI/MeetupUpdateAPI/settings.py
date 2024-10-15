@@ -21,6 +21,8 @@ load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Get the SECRET_KEY from the environment
 SECRET_KEY = os.getenv('SECRET_KEY')
 ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '').split(' ')
@@ -28,7 +30,7 @@ CORS_ALLOWED_ORIGIN = os.getenv('ALLOWED_ORIGIN', '').split(' ')
 API_KEY = os.getenv('API_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # Create a logs directory
 LOGS_DIR = os.environ.get('DJANGO_LOGS_DIR', os.path.join(BASE_DIR, 'logs'))
